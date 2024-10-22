@@ -15,6 +15,16 @@ SustainED is a website aimed at helping teachers in the Seattle Public School di
     - Resource Filter
 - Quiz Page
 
+### Development
+
+In order to devlop SustainED we will be using the following frameworks and languages:
+
+- HTML
+- CSS
+- Javascript/Typescript
+- React
+- Bootstrap
+- Firebase
 
 ### Problem Statement:
 #### According to the United Nations’ Department of Economic and Social Affairs and their Statistical Division, 69% of ninth-grade science and social science curricula do not mention climate change, and 66% omit sustainability. Not only this but 50% of teachers admitted to not teaching these subjects due to a lack the confidence or willingness to teach them (United Nations Statistics Division, n.d.). With climate change becoming the biggest threat facing humanity, and counting human activities as its main driver (United Nations, n.d.), it is imperative that this problem in education is addressed as soon as possible.
