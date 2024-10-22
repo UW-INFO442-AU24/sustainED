@@ -1,6 +1,21 @@
 # SustainED
 ## Group 3: Zoie Aquino, Keiver Bencomo, Khadija Dial, Alex Han, Justin Tang
 
+### Mission
+SustainED is a website aimed at helping teachers in the Seattle Public School district to provide activities, events, lessons and resources aimed at improving their skills and abilities realted to Sustainability. By providing these resources, we hope to make teachers feel more confident and therefore increase the presence of sustainability lessons in the K-12 curriculum in the area.
+
+### Features
+
+- Home Page
+- Event Page
+    - Event Search
+    - Event Filter
+- Resource Page
+    - Resource Search
+    - Resource Filter
+- Quiz Page
+
+
 ### Problem Statement:
 #### According to the United Nations’ Department of Economic and Social Affairs and their Statistical Division, 69% of ninth-grade science and social science curricula do not mention climate change, and 66% omit sustainability. Not only this but 50% of teachers admitted to not teaching these subjects due to a lack the confidence or willingness to teach them (United Nations Statistics Division, n.d.). With climate change becoming the biggest threat facing humanity, and counting human activities as its main driver (United Nations, n.d.), it is imperative that this problem in education is addressed as soon as possible.
 
