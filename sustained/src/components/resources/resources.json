@@ -1,0 +1,33 @@
+[
+    {
+      "resource_type": "article",
+      "title": "Understanding JavaScript Closures",
+      "description": "A comprehensive guide to mastering closures in JavaScript, with real-world examples.",
+      "published_date": "2023-08-15"
+    },
+    {
+      "resource_type": "video",
+      "title": "CSS Grid Layout Explained",
+      "description": "An in-depth video tutorial covering CSS Grid Layout with practical examples.",
+      "published_date": "2022-12-04"
+    },
+    {
+      "resource_type": "ebook",
+      "title": "Advanced React Patterns",
+      "description": "This eBook explores advanced design patterns in React for creating scalable applications.",
+      "published_date": "2024-01-10"
+    },
+    {
+      "resource_type": "podcast",
+      "title": "Tech Trends: AI in Web Development",
+      "description": "A podcast discussing the latest advancements in AI and its influence on web development practices.",
+      "published_date": "2023-11-07"
+    },
+    {
+      "resource_type": "course",
+      "title": "Full-Stack Web Development Bootcamp",
+      "description": "An immersive bootcamp covering front-end and back-end web development technologies.",
+      "published_date": "2021-09-20"
+    }
+]
+  
