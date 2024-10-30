@@ -1,13 +1,13 @@
 export type ResourceData = {
-    resource_type: string
     title: string
+    resource_type: string
     description: string
-    published_date: string // can't use Date, typescript issue?
+    published_date: string
 }
 
 function ResourceCard(props: ResourceData) {
-    const resource_type = props.resource_type
     const title = props.title
+    const resource_type = props.resource_type
     const description = props.description
     const published_date = props.published_date
 
