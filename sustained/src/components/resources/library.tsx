@@ -9,25 +9,23 @@ function Library() {
     const [filteredResources, setFilteredResources] = useState<ReactNode>([])
     const [selectedResourceType, setSelectedResourceType] = useState("")
 
-    const resourceList = resources.map(resource => {
-        return (
-            <ResourceCard
-                title={resource.title}
-                resource_type={resource.resource_type} 
-                description={resource.description} 
-                published_date={resource.published_date}                
-            />
-        )
-    })
+    const resourceList = resources.map(resource =>
+        <ResourceCard
+            title={resource.title}
+            resource_type={resource.resource_type} 
+            description={resource.description} 
+            published_date={resource.published_date}                
+        />
+    )
 
     // Gathers unique resource types
-    const resourceTypes = resources
+    const resourceTypes: string[] = resources
         .map(resource => resource.resource_type)
         .filter((resourceType, index, self) => {
             return self.indexOf(resourceType) === index;
         })
     
-        useEffect(() => {
+    useEffect(() => {
         // filters the resource list to the user's selection
         if (selectedResourceType === "") {
             setFilteredResources(resourceList)

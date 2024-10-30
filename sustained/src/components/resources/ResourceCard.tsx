@@ -12,7 +12,7 @@ function ResourceCard(props: ResourceData) {
     const published_date = props.published_date
 
     return (
-        <div>
+        <div className="card">
             <h1>Title: {title}</h1>
             <h2>Source: {resource_type}</h2>
             <p>Date: {published_date}</p>

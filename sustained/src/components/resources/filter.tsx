@@ -1,6 +1,6 @@
 export type FilterData = {
     resourceTypes: string[]
-    setSelectedResourceType: (resourceType: string) => void // unsure why you have to define it like this
+    setSelectedResourceType: (resourceType: string) => void
 }
 
 export default function Filter(props: FilterData) {
@@ -16,7 +16,7 @@ export default function Filter(props: FilterData) {
         <div>
             <label htmlFor="resourceTypeFilter">Filter by Resource Type: </label>
             <select id="resourceTypeFilter" onChange={handleResourceChange}>
-                <option value="">All</option>
+                <option key="all" value="">All</option>
                 {resourceTypes.map((type) => (
                     <option key={type} value={type}>
                         {type}
