@@ -1,6 +1,6 @@
 import React from 'react'
 
-const login = () => {
+const resourcecards = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const login = () => {
   )
 }
 
-export default login
+export default resourcecards

@@ -2,12 +2,17 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Library from './components/resources/Library';
+import Register from './components/register/register'; 
 
 // display components here
 function App() {
   return (
-    <div>
-      {<Library />}
+    <div className="App">
+      <header className="App-header">
+        <main>
+         {/*<Register />*/}
+        </main>
+      </header>
     </div>
   );
 }
