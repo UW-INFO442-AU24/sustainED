@@ -43,7 +43,7 @@ function Library() {
 
             setFilteredResources(filteredData);
         }
-    }, [selectedResourceType, resourceList, resources])
+    }, [selectedResourceType])
 
     return (
         <div>
