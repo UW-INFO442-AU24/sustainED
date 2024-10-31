@@ -10,7 +10,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <main>
-         {/*<Register />*/}
+         {/* <Register /> */}
+         <Library />
         </main>
       </header>
     </div>
