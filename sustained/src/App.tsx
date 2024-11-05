@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Library from './components/resources/Library';
-import Register from './components/register/register'; 
+import Register from './components/Register/register'; 
 
 // display components here
 function App() {
