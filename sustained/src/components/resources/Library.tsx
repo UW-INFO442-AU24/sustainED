@@ -10,6 +10,8 @@ function Library() {
     const [selectedResourceType, setSelectedResourceType] = useState<String>("")
     const [selectedEnvironmentTopic, setSelectedEnvironmentTopic] = useState<String>("")
     const [selectedGradeLevel, setSelectedGradeLevel] = useState<number>(0)
+    const [resultMessage, setResultMessage] = useState<String>("")
+    const [filterRequestBoolean, setFilterRequestBoolean] = useState<boolean>()
 
 
     // Gathers unique resource types, environment topic, and grade levels
@@ -56,18 +58,27 @@ function Library() {
                 grade_level={filteredResource.grade_level}
             />
         ));
+        if (resourceCards.length > 1) {
+            setResultMessage(resourceCards.length.toString() + " results found.")
+        } else if (resourceCards.length === 1) {
+            setResultMessage("1 result found.")
+        } else {
+            setResultMessage("No results found.")
+        }
 
         setFilteredResources(resourceCards);
     }, [selectedResourceType, selectedEnvironmentTopic, selectedGradeLevel])
 
     return (
         <div>
-            <h1>Resource Library</h1>   
+            <h1>Resource Library</h1>
             <Filter 
                 resourceTypes={resourceTypes} setSelectedResourceType={setSelectedResourceType}
                 environmentTopics={environment_topics} setSelectedEnvironmentTopic={setSelectedEnvironmentTopic}
                 gradeLevels={grade_levels} setSelectedGradeLevel={setSelectedGradeLevel}
+                filterRequest={setFilterRequestBoolean} 
             />    
+            {filterRequestBoolean && <p>{resultMessage}</p>}
             {filteredResources}
         </div>
     );
