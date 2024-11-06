@@ -1,22 +1,28 @@
 export type ResourceData = {
     title: string
-    resource_type: string
     description: string
+    resource_type: string
     published_date: string
+    environment_topic: string
+    grade_level: number
 }
 
 function ResourceCard(props: ResourceData) {
     const title = props.title
-    const resource_type = props.resource_type
     const description = props.description
+    const environment_topic = props.environment_topic
+    const resource_type = props.resource_type
+    const grade_level = props.grade_level
     const published_date = props.published_date
 
     return (
         <div className="card">
             <h1>Title: {title}</h1>
-            <h2>Source: {resource_type}</h2>
-            <p>Date: {published_date}</p>
             <p>Description: {description}</p>
+            <p>Environment Topic: {environment_topic}</p>
+            <p>Source: {resource_type}</p>
+            <p>Grade Level Comprehension: {grade_level}</p>
+            <p>Date: {published_date}</p>
         </div>
     )
 }
