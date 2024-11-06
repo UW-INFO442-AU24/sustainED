@@ -47,7 +47,7 @@ export default function Filter(props: FilterData) {
                     </option>
                 ))}
             </select>
-            
+            {/* Environment Topics */}
             <label htmlFor="environmentTopicFilter">Environment Topic: </label>
             <select id="environmentTopicFilter" onChange={handleEnvironmentChange} >
                 <option value="">All</option>
@@ -57,7 +57,7 @@ export default function Filter(props: FilterData) {
                     </option>
                 ))}
             </select>
-
+            {/* Grade levels */}
             <label htmlFor="gradeLevelFilter">Grade Level Comprehension: </label>
             <select id="gradeLevelFilter" onChange={handleGradeLevelChange} >
                 <option value="0">All</option>
