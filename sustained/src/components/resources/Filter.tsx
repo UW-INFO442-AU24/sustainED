@@ -7,6 +7,7 @@ export type FilterData = {
     setSelectedResourceType: (resourceType: string) => void;
     setSelectedEnvironmentTopic: (environment_topic: string) => void;
     setSelectedGradeLevel: (grade_level: number) => void;
+    filterRequest: (request: boolean) => void;
 };
 
 export default function Filter(props: FilterData) {
@@ -32,6 +33,7 @@ export default function Filter(props: FilterData) {
         props.setSelectedResourceType(selectedResourceType);
         props.setSelectedEnvironmentTopic(selectedEnvironmentTopic);
         props.setSelectedGradeLevel(selectedGradeLevel);
+        props.filterRequest(true);
     };
 
     return (
