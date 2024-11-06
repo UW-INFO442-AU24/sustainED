@@ -1,34 +1,74 @@
+import { useState } from 'react';
+
 export type FilterData = {
-    resourceTypes: string[]
-    setSelectedResourceType: (resourceType: string) => void
-}
+    resourceTypes: string[];
+    environmentTopics: string[];
+    gradeLevels: number[];
+    setSelectedResourceType: (resourceType: string) => void;
+    setSelectedEnvironmentTopic: (environment_topic: string) => void;
+    setSelectedGradeLevel: (grade_level: number) => void;
+};
 
 export default function Filter(props: FilterData) {
-    const resourceTypes = props.resourceTypes
+    const { resourceTypes, environmentTopics, gradeLevels } = props;
 
-    let selectedResourceType : string
+    const [selectedResourceType, setSelectedResourceTypeState] = useState("");
+    const [selectedEnvironmentTopic, setSelectedEnvironmentTopicState] = useState("");
+    const [selectedGradeLevel, setSelectedGradeLevelState] = useState(0);
 
-    // sort by resource type
-    const handleResourceChange = (event: any) => {
-        selectedResourceType = event.target.value;
-    }
+    const handleResourceChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedResourceTypeState(event.target.value);
+    };
 
-    const submitFilter = (event: any) => {
-        props.setSelectedResourceType(selectedResourceType)
-    }
+    const handleEnvironmentChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedEnvironmentTopicState(event.target.value);
+    };
+
+    const handleGradeLevelChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedGradeLevelState(Number(event.target.value));
+    };
+
+    const submitFilter = (event: React.MouseEvent<HTMLButtonElement>) => {
+        props.setSelectedResourceType(selectedResourceType);
+        props.setSelectedEnvironmentTopic(selectedEnvironmentTopic);
+        props.setSelectedGradeLevel(selectedGradeLevel);
+    };
 
     return (
         <div>
-            <label htmlFor="resourceTypeFilter">Filter by Resource Type: </label>
-            <select id="resourceTypeFilter" onChange={handleResourceChange}>
+            <h2>Filter By:</h2>
+            {/* Resource Types */}
+            <label htmlFor="resourceTypeFilter">Resource Type: </label>
+            <select id="resourceTypeFilter" onChange={handleResourceChange} >
                 <option value="">All</option>
-                {resourceTypes.map((type) => (
+                {resourceTypes.sort().map((type) => (
                     <option key={type} value={type}>
                         {type}
                     </option>
                 ))}
             </select>
-            <button type="submit" onClick={submitFilter}>Filter</button>
+            
+            <label htmlFor="environmentTopicFilter">Environment Topic: </label>
+            <select id="environmentTopicFilter" onChange={handleEnvironmentChange} >
+                <option value="">All</option>
+                {environmentTopics.sort().map((topic) => (
+                    <option key={topic} value={topic}>
+                        {topic}
+                    </option>
+                ))}
+            </select>
+
+            <label htmlFor="gradeLevelFilter">Grade Level Comprehension: </label>
+            <select id="gradeLevelFilter" onChange={handleGradeLevelChange} >
+                <option value="0">All</option>
+                {gradeLevels.sort((a, b) => a - b).map((level) => (
+                    <option key={level} value={level}>
+                        {level}
+                    </option>
+                ))}
+            </select>
+            
+            <button type="button" onClick={submitFilter}>Filter</button>
         </div>
     );
 }
