@@ -8,6 +8,7 @@ export type FilterData = {
     setSelectedEnvironmentTopic: (environment_topic: string) => void;
     setSelectedGradeLevel: (grade_level: number) => void;
     filterRequest: (request: boolean) => void;
+    userSearch: (search: string) => void;
 };
 
 export default function Filter(props: FilterData) {
@@ -16,6 +17,7 @@ export default function Filter(props: FilterData) {
     const [selectedResourceType, setSelectedResourceTypeState] = useState("");
     const [selectedEnvironmentTopic, setSelectedEnvironmentTopicState] = useState("");
     const [selectedGradeLevel, setSelectedGradeLevelState] = useState(0);
+    const [userSearch, setUserSearch] = useState<string>("");
 
     const handleResourceChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedResourceTypeState(event.target.value);
@@ -29,10 +31,15 @@ export default function Filter(props: FilterData) {
         setSelectedGradeLevelState(Number(event.target.value));
     };
 
+    const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setUserSearch(event.target.value.toLowerCase());
+    }
+
     const submitFilter = (event: React.MouseEvent<HTMLButtonElement>) => {
         props.setSelectedResourceType(selectedResourceType);
         props.setSelectedEnvironmentTopic(selectedEnvironmentTopic);
         props.setSelectedGradeLevel(selectedGradeLevel);
+        props.userSearch(userSearch)
         props.filterRequest(true);
     };
 
@@ -69,6 +76,12 @@ export default function Filter(props: FilterData) {
                     </option>
                 ))}
             </select>
+            {/* search component */}
+            <label htmlFor="search">Search: </label>
+            <input type="text" id="search" name="library_search"
+                placeholder='Search by title'
+                onChange={handleSearch}
+            />
             
             <button type="button" onClick={submitFilter}>Filter</button>
         </div>
