@@ -7,10 +7,11 @@ function Library() {
     const resources: ResourceData[] = resourcesData as ResourceData[]  
 
     const [filteredResources, setFilteredResources] = useState<ReactNode>([])
-    const [selectedResourceType, setSelectedResourceType] = useState<String>("")
-    const [selectedEnvironmentTopic, setSelectedEnvironmentTopic] = useState<String>("")
+    const [selectedResourceType, setSelectedResourceType] = useState<string>("")
+    const [selectedEnvironmentTopic, setSelectedEnvironmentTopic] = useState<string>("")
     const [selectedGradeLevel, setSelectedGradeLevel] = useState<number>(0)
-    const [resultMessage, setResultMessage] = useState<String>("")
+    const [userSearch, setUserSearch] = useState<string>("")
+    const [resultMessage, setResultMessage] = useState<string>("")
     const [filterRequestBoolean, setFilterRequestBoolean] = useState<boolean>()
 
 
@@ -36,6 +37,9 @@ function Library() {
     useEffect(() => {
         let filteredData : ResourceData[] = resources
 
+        // Filters the library database by the user's selected: 
+        // (resource type, environmental topic, reading grade level)
+        // and by title search
         if (selectedResourceType) {
             filteredData = filteredData.filter(resource => resource.resource_type === selectedResourceType);
         }
@@ -48,8 +52,15 @@ function Library() {
             filteredData = filteredData.filter(resource => resource.grade_level === selectedGradeLevel);
         }
 
+        if (userSearch) {
+            filteredData = filteredData.filter(resource => 
+                resource.title.toLowerCase().includes(userSearch)
+            )
+        }
+
         const resourceCards = filteredData.map(filteredResource => (
             <ResourceCard
+                key={filteredResource.title + filteredResource.published_date}
                 title={filteredResource.title}
                 resource_type={filteredResource.resource_type}
                 description={filteredResource.description}
@@ -58,6 +69,8 @@ function Library() {
                 grade_level={filteredResource.grade_level}
             />
         ));
+
+        // Message to highlight result processing
         if (resourceCards.length > 1) {
             setResultMessage(resourceCards.length.toString() + " results found.")
         } else if (resourceCards.length === 1) {
@@ -67,7 +80,7 @@ function Library() {
         }
 
         setFilteredResources(resourceCards);
-    }, [selectedResourceType, selectedEnvironmentTopic, selectedGradeLevel])
+    }, [selectedResourceType, selectedEnvironmentTopic, selectedGradeLevel, userSearch])
 
     return (
         <div>
@@ -77,6 +90,7 @@ function Library() {
                 environmentTopics={environment_topics} setSelectedEnvironmentTopic={setSelectedEnvironmentTopic}
                 gradeLevels={grade_levels} setSelectedGradeLevel={setSelectedGradeLevel}
                 filterRequest={setFilterRequestBoolean} 
+                userSearch={setUserSearch}
             />    
             {filterRequestBoolean && <p>{resultMessage}</p>}
             {filteredResources}
