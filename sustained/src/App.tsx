@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
 import Library from './components/resources/Library';
-import Register from './components/Register/register'; 
+import Register from './components/register/register'; 
+import Home from './components/home/homePage'
+import './components/register/registerStyle.css'; 
 
 // display components here
 function App() {
@@ -10,8 +11,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <main>
+         {/* < home/> */}
+         {/* <Register /> */}
          <Register />
-         {/*<Library />*/}
         </main>
       </header>
     </div>
