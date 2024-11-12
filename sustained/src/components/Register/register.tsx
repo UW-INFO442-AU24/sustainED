@@ -1,5 +1,10 @@
 import React, { FormEvent, useState, ChangeEvent } from 'react';
 import './registerStyle.css';
+import { getDatabase, ref } from 'firebase/database';
+//get a reference to the database service
+const db = getDatabase();
+
+
 
 const Form = () => {
   // state object to manage the form data
