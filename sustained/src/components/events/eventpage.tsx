@@ -1,18 +1,9 @@
 import React, { useState } from 'react';
+import { Dropdown, DropdownButton } from 'react-bootstrap';
 import EventCard from './eventcards';
-import { Container, Row, Col, Button, Dropdown, DropdownButton } from 'react-bootstrap';
+import './events.css'
 
-interface EventData {
-  id: number;
-  image: string;
-  title: string;
-  date: string;
-  time: string;
-  location: string;
-  sustainabilityType: string;
-}
-
-const events: EventData[] = [
+const events = [
   {
     id: 1,
     image: '/eventimg/event1.jpg',
@@ -20,7 +11,8 @@ const events: EventData[] = [
     date: '2024-12-06',
     time: '9:00 AM',
     location: 'Cedarbrook Lodge (18525 36th Ave S, Seattle, WA 98188)',
-    sustainabilityType: 'Forestry'
+    sustainabilityType: 'Forestry',
+    link: 'https://waconservationaction.org/our-work/areas-of-work/evergreen-forests-old/carbon-conference/'
   },
   {
     id: 2,
@@ -29,7 +21,8 @@ const events: EventData[] = [
     date: '2024-11-15',
     time: '12:30 PM',
     location: 'Cispus Learning Center (2142 Cispus Rd, Randle, WA 98377)',
-    sustainabilityType: 'General'
+    sustainabilityType: 'General',
+    link: 'hhttps://www.e3washington.org/conference'
   },
   {
     id: 3,
@@ -38,7 +31,8 @@ const events: EventData[] = [
     date: '2024-12-05',
     time: '12:30 PM - 1:20 PM',
     location: 'Kane Hall 120 (4069 Spokane Ln NE, Seattle, WA 98105)',
-    sustainabilityType: 'Waste'
+    sustainabilityType: 'Waste',
+    link: 'https://sustainability.uw.edu/events?trumbaEmbed=view%3Devent%26eventid%3D177968217'
   },
   {
     id: 4,
@@ -47,47 +41,73 @@ const events: EventData[] = [
     date: '2025-01-17',
     time: '12:00 PM - 1:30 PM',
     location: 'The Olsen Room (Gowen Hall 1A, Seattle, WA 98105)',
-    sustainabilityType: 'Conservation'
+    sustainabilityType: 'Conservation',
+    link: 'http://calendar.washington.edu/sea_essuw/177953379/InclusiveConservationImpactEvaluationLessonsIncludingforDebtRelief'
   },
 ];
 
-const EventPage: React.FC = () => {
-  const [filteredEvents, setFilteredEvents] = useState<EventData[]>(events);
+const EventPage = () => {
+  const [filteredEvents, setFilteredEvents] = useState(events);
+  const [selectedType, setSelectedType] = useState('All');
+  const [sortOrder, setSortOrder] = useState('Newest First');
 
   const filterEvents = (type: string) => {
-    const filtered = type === 'All' ? events : events.filter(event => event.sustainabilityType === type);
-    setFilteredEvents(filtered);
+      setSelectedType(type);
+      if (type === 'All') {
+          setFilteredEvents(events);
+      } else {
+          setFilteredEvents(events.filter(event => event.sustainabilityType === type));
+      }
   };
 
-  const sortEventsByDate = () => {
-    const sorted = [...filteredEvents].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
-    setFilteredEvents(sorted);
+  const sortEvents = (order: string) => {
+      setSortOrder(order);
+      const sortedEvents = [...filteredEvents].sort((a, b) => {
+          if (order === 'Newest First') {
+              return new Date(b.date).getTime() - new Date(a.date).getTime();
+          } else {
+              return new Date(a.date).getTime() - new Date(b.date).getTime();
+          }
+      });
+      setFilteredEvents(sortedEvents);
   };
 
   return (
-    <Container className="mt-4">
-      <h1 className="text-left mb-4">Upcoming Sustainability Events</h1>
+      <div className="container">
+          <h1>Upcoming Events</h1>
+          <p className="subheading">Find upcoming environmental sustainability events happening in Seattle!</p>
+          
+          <div className="filter-sort-container">
+              <Dropdown onSelect={(eventKey) => filterEvents(eventKey || 'All')}>
+                  <Dropdown.Toggle style={{ backgroundColor: '#7e6c55', borderColor: '#7e6c55' }}>
+                      {selectedType}
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                      <Dropdown.Item eventKey="All">All</Dropdown.Item>
+                      <Dropdown.Item eventKey="Forestry">Forestry</Dropdown.Item>
+                      <Dropdown.Item eventKey="General">General</Dropdown.Item>
+                      <Dropdown.Item eventKey="Waste">Waste</Dropdown.Item>
+                      <Dropdown.Item eventKey="Conservation">Conservation</Dropdown.Item>
+                  </Dropdown.Menu>
+              </Dropdown>
 
-      <div className="d-flex justify-content-between mb-3">
-        <DropdownButton id="filter-dropdown" title="Filter by Type" variant="secondary">
-          <Dropdown.Item onClick={() => filterEvents('All')}>All</Dropdown.Item>
-          <Dropdown.Item onClick={() => filterEvents('Forestry')}>Forestry</Dropdown.Item>
-          <Dropdown.Item onClick={() => filterEvents('General')}>General</Dropdown.Item>
-          <Dropdown.Item onClick={() => filterEvents('Waste')}>Waste</Dropdown.Item>
-          <Dropdown.Item onClick={() => filterEvents('Conservation')}>Conservation</Dropdown.Item>
-        </DropdownButton>
+              <Dropdown onSelect={(eventKey) => sortEvents(eventKey || 'Newest First')}>
+                  <Dropdown.Toggle style={{ backgroundColor: '#7e6c55', borderColor: '#7e6c55' }}>
+                      {sortOrder}
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                      <Dropdown.Item eventKey="Newest First">Newest First</Dropdown.Item>
+                      <Dropdown.Item eventKey="Oldest First">Oldest First</Dropdown.Item>
+                  </Dropdown.Menu>
+              </Dropdown>
+          </div>
 
-        <Button variant="secondary" onClick={sortEventsByDate}>Sort by Date</Button>
+          <div className="grid-container">
+              {filteredEvents.map(event => (
+                  <EventCard key={event.id} event={event} />
+              ))}
+          </div>
       </div>
-
-      <Row xs={1} md={2} lg={2} className="g-4">
-        {filteredEvents.map((event) => (
-          <Col key={event.id}>
-            <EventCard event={event} />
-          </Col>
-        ))}
-      </Row>
-    </Container>
   );
 };
 

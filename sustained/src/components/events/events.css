@@ -1,25 +1,143 @@
-.event-card {
-    border: 1px solid #ccc;
+body {
+    background-color: #fffcf5;
+    font-family: Arial, sans-serif;
+}
+
+.container {
     padding: 20px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #333;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+}
+
+.subheading {
+    font-size: 1.25rem; 
+    color: #666;
     margin-bottom: 20px;
+}
+
+p {
+    color: #666;
+}
+
+.filter-sort-container {
     display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dropdown-button, .sort-button {
+    background-color: #7e6c55;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px; 
+}
+
+.dropdown-button:hover, .sort-button:hover {
+    background-color: #71614c;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.event-card {
+    display: flex;
+    background-color: #f6f2e4;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
     align-items: center;
 }
-  
-.event-image {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
+
+.event-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-  
-.event-details {
-    flex: 1;
+
+.event-card img {
+    width: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 15px;
 }
-  
-.learn-more {
-    background-color: #5A5A5A;
-    color: #fff;
-    border: none;
+
+.event-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.event-card h2 {
+    font-size: 1.25rem;
+    margin: 0;
+    text-align: left;
+    padding-bottom: 23px;
+}
+
+.event-card p {
+    color: #555;
+    margin: 5px 0;
+}
+
+.learn-more-button {
+    background-color: #7e6c55;
+    color: white;
     padding: 10px;
-    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+.learn-more-button:hover {
+    background-color: #71614c;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; 
+    }
+    
+    .event-card {
+        flex-direction: column; 
+        text-align: center;
+        align-items: center;
+    }
+    
+    .event-card img {
+        width: 100%; 
+        height: 150px; 
+        margin-right: 0; 
+        margin-bottom: 15px; 
+    }
+    
+    .event-card-content {
+        align-items: center;
+    }
+    
+    .event-card h2 {
+        text-align: center;
+    }
+
+    .learn-more-button {
+        align-self: center;
+        margin-top: 15px;
+    }
 }

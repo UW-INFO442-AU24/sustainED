@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface EventProps {
+interface EventCardProps {
   event: {
     id: number;
     image: string;
@@ -9,20 +9,23 @@ interface EventProps {
     time: string;
     location: string;
     sustainabilityType: string;
+    link: string;
   };
 }
 
-const EventCard: React.FC<EventProps> = ({ event }) => {
+const EventCard: React.FC<EventCardProps> = ({ event }) => {
   return (
     <div className="event-card">
-      <img src={event.image} alt={event.title} className="event-image" />
-      <div className="event-details">
+      <img src={event.image} alt={event.title} />
+      <div className="event-card-content">
         <h2>{event.title}</h2>
-        <p>Date: {event.date}</p>
-        <p>Time: {event.time}</p>
-        <p>Location: {event.location}</p>
-        <p>Sustainability Type: {event.sustainabilityType}</p>
-        <button className="learn-more">Learn More</button>
+        <p><strong>Date:</strong> {event.date}</p>
+        <p><strong>Time:</strong> {event.time}</p>
+        <p><strong>Location:</strong> {event.location}</p>
+        <p><strong>Type:</strong> {event.sustainabilityType}</p>
+        <a href={event.link} className="learn-more-button" target="_blank" rel="noopener noreferrer">
+          Learn More
+        </a>
       </div>
     </div>
   );
