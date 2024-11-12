@@ -5,10 +5,10 @@ import QuizIntro from './components/quiz/QuizIntro';
 import QuizForm from './components/quiz/quizform';
 import QuizResults from './components/quiz/QuizResults';
 import Library from './components/resources/Library';
-import Register from './components/Register/register'; 
+import Register from './components/register/register'; 
 import Home from './components/home/homePage'
 import EventPage from './components/events/eventpage';
-import './components/Register/registerStyle.css'; 
+import './components/register/registerStyle.css'; 
 import { NextUIProvider } from '@nextui-org/react';
 
 // display components here

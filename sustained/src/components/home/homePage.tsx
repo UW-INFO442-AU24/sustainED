@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Register/registerStyle.css';
+import '../register/registerStyle.css';
 import HomeCards from './homeCards';
 import homeImage from './home-image.png';
 
