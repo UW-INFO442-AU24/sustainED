@@ -29,7 +29,7 @@ function App() {
                 <Route path="/quiz-intro" element={<QuizIntro />} />
                 <Route path="/quiz-form" element={<QuizForm />} />
                 <Route path="/quiz-results" element={<QuizResults />} />
-                <Route path="/events" element={EventPage} />
+                <Route path="/events" element={<EventPage />} />
               </Routes>
             </Router>
           </NextUIProvider>
