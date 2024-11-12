@@ -1,0 +1,25 @@
+.event-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+  
+.event-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+  
+.event-details {
+    flex: 1;
+}
+  
+.learn-more {
+    background-color: #5A5A5A;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
