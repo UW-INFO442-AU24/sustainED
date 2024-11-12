@@ -1,19 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import QuizIntro from './components/quiz/QuizIntro';
+import QuizForm from './components/quiz/QuizForm';
+import QuizResults from './components/quiz/QuizResults';
 import Library from './components/resources/Library';
-import Register from './components/register/register'; 
+import Register from './components/Register/register'; 
 import Home from './components/home/homePage'
-import './components/register/registerStyle.css'; 
+import './components/Register/registerStyle.css'; 
+import { NextUIProvider } from '@nextui-org/react';
 
 // display components here
 function App() {
+  
   return (
     <div className="App">
       <header className="App-header">
         <main>
-         {/* < home/> */}
-         {/* <Register /> */}
-         <Register />
+        <NextUIProvider> {/* this is just to render the components from nextui for the quiz */}
+            <Router>
+              <Routes>
+                <Route path='/' element={<Navigate to="/home" />} /> {/* when npm start is ran, the default page shown is the home component */}
+                <Route path='/home' element={<Home />} />
+                <Route path='/register' element={<Register />} />
+                <Route path='/library' element={<Library />} />
+                <Route path="/quiz-intro" element={<QuizIntro />} />
+                <Route path="/quiz-form" element={<QuizForm />} />
+                <Route path="/quiz-results" element={<QuizResults />} />
+              </Routes>
+            </Router>
+          </NextUIProvider>
         </main>
       </header>
     </div>

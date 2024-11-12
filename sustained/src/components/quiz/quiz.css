@@ -1,0 +1,292 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  background-color: #fffcf5;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #fffcf5;
+}
+
+.montserrat-font {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* for quizintro: */
+.intro-container {
+  padding: 2rem;
+  text-align: center;
+  display: flexbox;
+  justify-content: center;
+}
+
+.start-button {
+  background-color: #397939;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.start-button:hover {
+  background-color: #397939;
+}
+
+.intro {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* quiz form */
+.quiz-container {
+  padding: 1rem;
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.question-text {
+  font-size: 20px;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.question-text {
+  margin: 0;
+}
+
+.question-progress {
+  margin: 0;
+}
+
+/* radio buttons */
+.radio-group {
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  margin-bottom: 25px;
+}
+
+.radio-option {
+  display: inline-flex;
+  margin: 0;
+  background-color: var(--nextui-colors-content1);
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  width: 100%;
+  max-width: auto;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid transparent;
+}
+
+.radio-option[data-selected="true"] {
+  border-color: #547b56;
+}
+
+.radio-option .nextui-radio-wrapper {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.radio-option .nextui-radio-control {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  border: 2px solid #547b56;
+}
+
+.radio-option .nextui-radio-label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* buttons */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.next-button:disabled,
+.back-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.next-button {
+  background-color: #397939;
+  color: #ffffff;
+}
+
+.back-button {
+  color: #000000;
+}
+
+.details {
+  font-family: "Montserrat", Helvetica, sans-serif;
+}
+
+/* message */
+.message {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2rem;
+  text-align: center;
+  display: flexbox;
+  justify-content: center;
+}
+
+/* quiz-results */
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+h2,
+.subtitle {
+  text-align: center;
+}
+
+.restart-button {
+  font-size: large;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 15px;
+  background-color: #397939;
+  color: #fffcf5;
+}
+
+.home-button {
+  font-size: large;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 15px;
+  background-color: #c3c3c3;
+  color: #272727;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.no-resources {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* only applies to screens 480 and larger */
+@media (min-width: 480px) {
+  /* quiz-form */
+  .next-button {
+    background-color: #397939;
+    color: #ffffff;
+  }
+
+  .back-button {
+    margin-right: 235px;
+  }
+
+  .radio-option {
+    display: inline-flex;
+    margin: 0;
+    background-color: var(--nextui-colors-content1);
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    width: 100%;
+    max-width: 350px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px solid transparent;
+  }
+
+  /* quiz-intro */
+  .intro-container {
+    margin-top: 70px;
+  }
+
+  /* quiz result */
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .restart-button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .resource-card {
+    max-width: 600px; /* Maximum width to prevent it from being too wide */
+    height: 00px; /* Fixed height for each card */
+    width: 100%; /* Makes the card responsive, fills up to max-width */
+    overflow: hidden;
+  }
+}
+
+/* only applies to screens 768px and larger */
+@media (min-width: 768px) {
+  /* quiz-form */
+  .radio-option {
+    display: inline-flex;
+    margin: 0;
+    background-color: var(--nextui-colors-content1);
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    width: 100%;
+    max-width: 900px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px solid transparent;
+  }
+
+  /* quiz-results */
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+    /* allows wrapping on smaller screens */
+    gap: 16px; /* space between cards */
+    justify-content: center; /* centers the cards */
+  }
+
+  .resource-card {
+    width: 300px; /* set a consistent width for each card */
+    flex: 1 1 auto; /* allows cards to grow and shrink */
+  }
+}

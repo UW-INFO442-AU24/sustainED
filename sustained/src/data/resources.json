@@ -1,0 +1,147 @@
+{
+    "resources": [
+        {
+            "id": 1,
+            "title": "EN-Roads Climate",
+            "grade-level": ["9th", "10th", "11th", "12th"],
+            "media-type": "Interactive",
+            "subject-area": ["Science", "English", "Math", "History", "Arts", "Foreign Languages", "Other"],
+            "time-range": ["30-45 minutes"],
+            "area": ["Impacts of climate change"],
+            "external-link": "https://en-roads.climateinteractive.org/scenario.html?v=24.10.0",
+            "image": "https://lh7-us.googleusercontent.com/d0AhgSlOAwYaSBb8vSozUI-3eozBp0aKVo1iFpeNeCI8B7_qcxab8LkASlCD_gBrRyJgLFwwTXMqeDOIFtgypIUiLizpc1U9oKO-mzPCikn0usXVmVqPpRzmPoaflFYzyYJVLeXBcN8u9BQsKKxYIw"
+        }, 
+        {
+            "id": 2,
+            "title": "Powering Sustainability: The Good News on Energy, the Environment and Our Future",
+            "grade-level": ["11th", "12th"],
+            "media-type": "PDF", 
+            "subject-area": ["Other", "Science"],
+            "time-range": ["45 minutes - 1 hour"],
+            "area": ["Impacts of climate change"],
+            "external-link": "https://cgs.la.psu.edu/wp-content/uploads/sites/27/2020/12/psu_sustainability_12feb16B.pdf", 
+            "image": "https://i.pinimg.com/736x/7c/30/9a/7c309a2dd4de666b64eabbe87b8e2b7e.jpg" 
+        },
+        {
+            "id": 3,
+            "title": "Diversity of Climate Change",
+            "grade-level": ["9th", "10th"],
+            "media-type": "PDF",
+            "subject-area": ["Science"],
+            "time-range": ["15-30 minutes"],
+            "area": ["Causes of climate change", "Solutions to climate change", "Impacts of climate change"], 
+            "external-link": "https://wdfw.wa.gov/sites/default/files/2020-11/diversityofclimatechange.pdf",
+            "image": "https://bloximages.newyork1.vip.townnews.com/bigcountrynewsconnection.com/content/tncms/assets/v3/editorial/c/5c/c5c8aa28-a2cd-11eb-a3bc-735f436ed4f8/60806c9d334b8.image.jpg?crop=1920%2C1008%2C0%2C35&resize=1200%2C630&order=crop%2Cresize"
+        },
+        {
+            "id": 4,
+            "title": "Sea Level Rise Climate Change Demo Educator Guide",
+            "grade-level": ["9th", "10th"],
+            "media-type": "PDF",
+            "subject-area": ["Science"],
+            "time-range": ["30-45 minutes"],
+            "area": ["Impacts of climate change"],
+            "external-link": "https://climate.mit.edu/til-about-sea-level-rise-part-1-educator-guide",
+            "image": "https://climate.mit.edu/sites/default/files/2020-07/HeaderBG.jpg"
+        },
+        {
+            "id": 5,
+            "title": "A public health expert’s guide to climate change",
+            "grade-level": ["9th", "10th", "11th", "12th"],
+            "media-type": "Podcast",
+            "subject-area": ["Other"],
+            "time-range": ["15-30 minutes"],
+            "area": ["Impacts of climate change"], 
+            "external-link": "https://climate.mit.edu/podcasts/e6-public-health-experts-guide-climate-change",
+            "image": "https://news.mit.edu/sites/default/files/styles/term_page__news_article/public/images/202408/MIT-Future-African-01-press.jpg?itok=0ULNUXs_"
+        },
+        {
+            "id": 6,
+            "title": "Energy storage: keeping the lights on with a clean electric grid",
+            "grade-level": ["9th", "10th", "11th", "12th"],
+            "media-type": "Podcast",
+            "subject-area": ["Science"],
+            "time-range": ["Less than 15 minutes"],
+            "area": ["Solutions to climate change"], 
+            "external-link": "https://climate.mit.edu/podcasts/e7-energy-storage-keeping-lights-clean-electric-grid",
+            "image": "https://dynamic-assets.hitachienergy.com/is/image/hitachiabbpowergrids/hitachi-energy-transmission-towers-2436x810:64-25?wid=1440&hei=563&fmt=png-alpha&fit=crop%2C1"
+        },
+        {
+            "id": 7,
+            "title": "TIL about cleaning up clean tech",
+            "grade-level": ["9th", "10th", "11th", "12th"],
+            "media-type": "Podcast",
+            "subject-area": ["Other"],
+            "time-range": ["Less than 15 minutes"],
+            "area": ["Solutions to climate change"], 
+            "external-link": "https://climate.mit.edu/podcasts/e9-til-about-cleaning-clean-tech",
+            "image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/itUG4rTJjWyU/v0/-1x-1.webp"
+        },
+        {
+            "id": 8,
+            "title": "TIL about national security",
+            "grade-level": ["11th", "12th"],
+            "media-type": "Podcast",
+            "subject-area": ["History"],
+            "time-range": ["Less than 15 minutes"],
+            "area": ["Impacts of climate change"], 
+            "external-link": "https://climate.mit.edu/podcasts/til-about-national-security",
+            "image": "https://www.thoughtco.com/thmb/2YrcmHc8Di2V3aZbG1IFVR7E1cA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1273601403-149f62036fbc4b5ea325de3e8f9fdfe0.jpg"
+        },
+        {
+            "id": 9,
+            "title": "Our Planet",
+            "grade-level": ["9th", "10th", "11th", "12th"],
+            "media-type": "Video", 
+            "subject-area": ["Science"],
+            "time-range": ["45 minutes - 1 hour"],
+            "area": ["Impacts of climate change"],
+            "external-link": "https://www.netflix.com/title/80049832",
+            "image": "https://i.vimeocdn.com/video/915942475-e3e9cb5e87fe26cb1cf5c69d6c09bda3799e142c1ee4e281d3f0c46cfe6aaf99-d_640?f=webp"     
+        },
+        {
+            "id": 10,
+            "title": "Eyes on the Earth",
+            "grade-level": ["9th", "10th", "11th", "12th"],
+            "media-type": "Interactive", 
+            "subject-area": ["Science", "History"],
+            "time-range": ["Less than 15 minutes"],
+            "area": ["Impacts of climate change"],
+            "external-link": "https://eyes.nasa.gov/apps/earth/#/",
+            "image": "https://science.nasa.gov/wp-content/uploads/2024/06/eyes3.jpg?w=2560&format=webp"   
+        },
+        {
+            "id": 11,
+            "title": "Global Ice Viewer",
+            "grade-level": ["9th", "10th", "11th", "12th"],
+            "media-type": "Interactive", 
+            "subject-area": ["Science"],
+            "time-range": ["Less than 15 minutes"],
+            "area": ["Impacts of climate change"],
+            "external-link": "https://climate.nasa.gov/interactives/global-ice-viewer/?intent=021",
+            "image": "https://science.nasa.gov/wp-content/uploads/2024/05/giv.jpg?w=2560&format=webp"      
+        },
+        {
+            "id": 12,
+            "title": "Norway’s Ålfotbreen Glacier Melting",
+            "grade-level": ["9th", "10th"],
+            "media-type": "Interactive", 
+            "subject-area": ["Science", "History"],
+            "time-range": ["Less than 15 minutes"],
+            "area": ["Impacts of climate change"],
+            "external-link": "https://climate.nasa.gov/images-of-change/?intent=131&id=880#880-norways-%C3%A5lfotbreen-glacier-melting-faster-in-recent-summers",
+            "image": "https://science.nasa.gov/wp-content/uploads/2024/05/ioc-promo.jpg?w=2560&format=webp"      
+        },
+        {
+            "id": 13,
+            "title": "How Do We Know About Earth's Past Climate?",
+            "grade-level": ["9th", "10th", "11th", "12th"],
+            "media-type": "Interactive", 
+            "subject-area": ["Science", "History"],
+            "time-range": ["Less than 15 minutes"],
+            "area": ["Impacts of climate change"],
+            "external-link": "https://climate.nasa.gov/explore/evidence-for-earths-past-climate/?intent=021",
+            "image": "https://science.nasa.gov/wp-content/uploads/2024/05/download.jpg?w=2560&format=webp"      
+        }
+    ]
+}

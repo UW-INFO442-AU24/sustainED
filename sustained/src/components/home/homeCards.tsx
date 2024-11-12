@@ -1,5 +1,5 @@
 import React from 'react'
-import '../register/registerStyle.css'
+import '../Register/registerStyle.css'
 
 const HomeCards = () => {
   return (
