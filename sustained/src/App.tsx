@@ -7,6 +7,7 @@ import QuizResults from './components/quiz/QuizResults';
 import Library from './components/resources/Library';
 import Register from './components/Register/register'; 
 import Home from './components/home/homePage'
+import EventPage from './components/events/eventpage';
 import './components/Register/registerStyle.css'; 
 import { NextUIProvider } from '@nextui-org/react';
 
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/quiz-intro" element={<QuizIntro />} />
                 <Route path="/quiz-form" element={<QuizForm />} />
                 <Route path="/quiz-results" element={<QuizResults />} />
+                <Route path="/events" element={EventPage} />
               </Routes>
             </Router>
           </NextUIProvider>
