@@ -2,6 +2,7 @@ import ResourceCard, { ResourceData } from './ResourceCard';
 import resourcesData from './resources.json'
 import { useState, useEffect, ReactNode } from 'react';
 import Filter from './Filter'
+import './resourceLib.css'
 
 function Library() {
     const resources: ResourceData[] = resourcesData as ResourceData[]  

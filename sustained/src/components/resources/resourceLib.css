@@ -1,0 +1,66 @@
+body {
+    background-color: #fffcf5;
+    font-family: Arial, sans-serif;
+    color: black
+}
+
+.filter-box {
+    margin-left: 10px;
+}
+
+label, select {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+select.filter-option, input.filter-option {
+    border: black solid 1px;
+    width: 150px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: left;
+}
+
+button.filter-resources {
+    background-color: #7e6c55;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+p {
+    margin-left: 5px;
+}
+
+div.card {
+    margin: 10px;
+    background-color: #f6f2e4;
+    display: block;
+    width: 95%;
+}
+
+div.card h1 {
+    font-size: 1.25rem;
+}
+
+div.card p {
+    font-size: 1rem;
+}
+
+@media (min-width: 700px) {
+    div.card {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
