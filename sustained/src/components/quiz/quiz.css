@@ -29,28 +29,45 @@ body {
 }
 
 .start-button {
-  background-color: #397939;
-  color: white;
+  background-color: #448244;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-size: large;
+  font-weight: 500;
+  color: #fffcf5;
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   margin: 20px;
+  filter: drop-shadow(#606060 0.5px 1px 0.2rem);
 }
 
 .start-button:hover {
-  background-color: #397939;
+  background-color: #285328;
 }
 
-.intro {
-  font-size: 2rem;
-  font-weight: bold;
+.intro,
+.qr-title {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 40px;
   margin-bottom: 1rem;
   text-align: center;
 }
 
+.s1,
+.s2,
+.s3,
+.subtitle {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
 /* quiz form */
 .quiz-container {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-weight: 400;
   padding: 1rem;
   max-width: 28rem;
   margin-left: auto;
@@ -59,7 +76,8 @@ body {
 }
 
 .question-text {
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 25px;
 }
 
 .question-header {
@@ -137,11 +155,17 @@ body {
 }
 
 .next-button {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: 400;
   background-color: #397939;
   color: #ffffff;
 }
 
 .back-button {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: 400;
   color: #000000;
 }
 
@@ -159,9 +183,8 @@ body {
 }
 
 /* quiz-results */
-.subtitle {
-  font-size: 20px;
-  margin-bottom: 10px;
+.qr-title {
+  margin-top: 55px;
 }
 
 h2,
@@ -170,6 +193,7 @@ h2,
 }
 
 .restart-button {
+  font-family: "Montserrat", Helvetica, sans-serif;
   font-size: large;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -178,17 +202,25 @@ h2,
   margin-top: 15px;
   background-color: #397939;
   color: #fffcf5;
+  filter: drop-shadow(#606060 0.5px 1px 0.2rem);
 }
 
 .home-button {
+  font-family: "Montserrat", Helvetica, sans-serif;
   font-size: large;
   padding-top: 10px;
   padding-bottom: 20px;
   margin: 0 auto;
   display: block;
-  margin-top: 15px;
-  background-color: #c3c3c3;
+  margin-top: 20px;
+  background-color: #dadada;
   color: #272727;
+  filter: drop-shadow(#606060 0.2px 0.1px 0.2rem);
+}
+
+.result-container {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .cards-container {
@@ -255,6 +287,11 @@ h2,
     width: 100%; /* Makes the card responsive, fills up to max-width */
     overflow: hidden;
   }
+
+  .question-text {
+    font-weight: 500;
+    font-size: medium;
+  }
 }
 
 /* only applies to screens 768px and larger */
@@ -276,11 +313,14 @@ h2,
     border: 2px solid transparent;
   }
 
+  .quiz-container {
+    max-width: 650px;
+  }
+
   /* quiz-results */
   .cards-container {
     display: flex;
     flex-direction: row;
-    /* allows wrapping on smaller screens */
     gap: 16px; /* space between cards */
     justify-content: center; /* centers the cards */
   }
@@ -288,5 +328,12 @@ h2,
   .resource-card {
     width: 300px; /* set a consistent width for each card */
     flex: 1 1 auto; /* allows cards to grow and shrink */
+  }
+}
+
+@media (min-width: 1024px) {
+  /* quiz form */
+  .quiz-container {
+    max-width: 900px;
   }
 }

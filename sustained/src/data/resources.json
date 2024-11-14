@@ -142,6 +142,94 @@
             "area": ["Impacts of climate change"],
             "external-link": "https://climate.nasa.gov/explore/evidence-for-earths-past-climate/?intent=021",
             "image": "https://science.nasa.gov/wp-content/uploads/2024/05/download.jpg?w=2560&format=webp"      
+        },
+        {
+            "id": 14,
+            "title": "Climate Mitigation",
+            "grade-level": ["9th", "10th", "11th", "12th"],
+            "media-type": "Interactive",
+            "subject-area": ["Science", "Other"],
+            "time-range": ["Less than 15 minutes", "15-30 minutes"],
+            "area": ["Solutions to climate change"],
+            "external-link": "https://onlinepublichealth.gwu.edu/how-to-reduce-climate-change/",
+            "image": "https://onlinepublichealth.gwu.edu/wp-content/uploads/sites/47/2021/03/worldClassFaculty_desktop_767.jpg"
+        },
+        {
+            "id": 15,
+            "title": "Exploring Snowflake Geometry",
+            "grade-level": ["9th", "10th", "11th", "12th"],
+            "media-type": "PDF",
+            "subject-area": ["Math"],
+            "time-range": ["15-30 minutes", "30-45 minutes"],
+            "area": ["Impacts of climate change"],
+            "external-link": "https://spacemath.gsfc.nasa.gov/Modules/6Module11.html",
+            "image": "https://www.nasa.gov/wp-content/uploads/2023/07/nasa-symbol.png?w=1920"
+        },
+        {
+            "id": 16,
+            "title": "SAGE III Explores Aerosol Math",
+            "grade-level": ["9th", "10th", "11th", "12th"],
+            "media-type": "PDF",
+            "subject-area": ["Math"],
+            "time-range": ["15-30 minutes", "30-45 minutes"],
+            "area": ["Impacts of climate change"],
+            "external-link": "https://spacemath.gsfc.nasa.gov/SAGE/SAGEbook.pdf",
+            "image": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/climate/2023/12/SAGEIII2768.jpg?w=4096&format=jpeg&fit=clip&crop=faces%2Cfocalpoint"
+        },
+        {
+            "id": 17,
+            "title": "Exploring States of Matter with Phase Diagrams",
+            "grade-level": ["9th", "10th", "11th", "12th"],
+            "media-type": "PDF",
+            "subject-area": ["Math"],
+            "time-range": ["15-30 minutes", "30-45 minutes"],
+            "area": ["Impacts of climate change"],
+            "external-link": "https://spacemath.gsfc.nasa.gov/Modules/8Module11.html ",
+            "image": "https://www.nasa.gov/wp-content/uploads/2023/03/a2384_composite_v3.jpg?w=1024"
+        }, 
+        {
+            "id": 18,
+            "title": "Exploring Human Impacts on Climate",
+            "grade-level": ["9th", "10th", "11th", "12th"],
+            "media-type": "PDF",
+            "subject-area": ["Math"],
+            "time-range": ["15-30 minutes", "30-45 minutes"],
+            "area": ["Impacts of climate change"],
+            "external-link": "https://spacemath.gsfc.nasa.gov/Modules/8Module8.html",
+            "image": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/climate/internal_resources/2716/power-station-374097-1920.jpeg?w=4096&format=jpeg&fit=clip&crop=faces%2Cfocalpoint"
+        },
+        {
+            "id": 19,
+            "title": "Artworks from Benjamin Von Wong",
+            "grade-level": ["9th", "10th", "11th", "12th"],
+            "media-type": "Visual Art",
+            "subject-area": ["Arts"], 
+            "time-range": ["Less than 15 minutes", "15-30 minutes"],
+            "area": ["Impacts of climate change"],
+            "external-link": "https://unforgettablelabs.com/",
+            "image": "https://www.thisiscolossal.com/wp-content/uploads/2022/03/00_TurnOffThePlasticTap_VonWong_4.jpg"
+        },
+        {
+            "id": 20,
+            "title": "Artworks by Maya Lin",
+            "grade-level": ["9th", "10th", "11th", "12th"],
+            "media-type": "Visual Art",
+            "subject-area": ["Arts"],
+            "time-range": ["Less than 15 minutes", "15-30 minutes"],
+            "area": ["Impacts of climate change"],
+            "external-link": "https://www.pacegallery.com/exhibitions/maya-lin-nature-knows-no-boundaries/",
+            "image": "https://www.pacegallery.com/media/images/_65A9977.width-2000.webp"
+        },
+        {
+            "id": 21,
+            "title": "AR5 Synthesis Report: Climate Change 2014",
+            "grade-level": ["9th", "10th", "11th", "12th"],
+            "media-type": "PDF",
+            "subject-area": ["History", "Science"],
+            "time-range": ["1 hour +"],
+            "area": ["Causes of climate change", "Impacts of climate change", "Solutions to climate change"],
+            "external-link": "https://www.ipcc.ch/site/assets/uploads/2018/02/SYR_AR5_FINAL_full.pdf",
+            "image": "https://www.iamconsortium.org/wp-content/uploads/2020/04/ipcc-scaled-900x.jpg"
         }
     ]
 }

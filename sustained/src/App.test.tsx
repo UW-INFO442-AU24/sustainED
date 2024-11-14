@@ -1,9 +1,16 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import { BrowserRouter } from 'react-router-dom';
 
 test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+  render(
+    // ignores the warn messages for v7 of react-router
+    <BrowserRouter future={{v7_startTransition: true, v7_relativeSplatPath: true}}>
+      <App />
+    </BrowserRouter>
+  );
+  const linkElement = screen.getByText(/SustainED/i);
   expect(linkElement).toBeInTheDocument();
 });
+

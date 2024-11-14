@@ -19,14 +19,16 @@ interface Resource {
 
 const QuizResults = () => {
     const location = useLocation();
-    const { matchedResources } = location.state as { matchedResources: Resource[] }; // retrieve matched resources from state
+    const { matchedResources } = location.state as { matchedResources: Resource[] } || {}; // retrieve matched resources from state
     const navigate = useNavigate(); 
-    console.log(matchedResources); // logging out the matched resources for debugging
+
+    console.log('Received matched resources:', matchedResources); // Add this line for debugging
 
     return (
-        <div>
-            <h2><b>Quiz Results</b></h2>
+        <div className='result-container'>
+            <h2 className='qr-title'><b>Quiz Results</b></h2>
             <p className='subtitle'>Here are some recommended resources for you:</p>
+
             {matchedResources.length > 0 ? (
                 <div className='cards-container'>
                     {matchedResources.map((resource) => (

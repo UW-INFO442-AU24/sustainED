@@ -18,8 +18,9 @@ export interface Resource {
     image: string;
 }
 
+
 const QuizForm = () => {
-    const [selectedOptions, setSelectedOptions] = useState<Record<number, string>>({}); // keeping track of what is currently being selected -- starting with nothing selected/no default
+    const [selectedOptions, setSelectedOptions] = useState<Record<string, string>>({}); // keeping track of what is currently being selected -- starting with nothing selected/no default
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); // keeping track of what question user is currently on -- starting with question 1
     const [progressPercentage, setProgressPercentage] = useState(0); // setting the progress percentage based on num of questions answered
     const navigate = useNavigate();
@@ -31,7 +32,7 @@ const QuizForm = () => {
           options: ["9th", "10th", "11th", "12th"]},
         {id: 2,
           question: "What media type do you prefer?",
-          options: ["PDF", "Video", "Podcast", "Interactive"]},
+          options: ["PDF", "Video", "Visual Art", "Podcast", "Interactive"]},
         {id: 3,
           question: "What subject/topic area do you teach?",
           options: ["Science", "English", "Math", "History", "Arts", "Foreign Languages", "Other"]},
@@ -43,18 +44,9 @@ const QuizForm = () => {
           options: ["Causes of climate change", "Solutions to climate change", "Impacts of climate change"]}
     ];
 
-    
-    // function to handle changing the selected options
-    const handleOptionChange = (value: string) => {
-        setSelectedOptions(prev => ({
-            ...prev,
-            [currentQuestionIndex + 1]: value
-        }));
-    };
-
     // function to match resources based on selected options
-    const matchingResources = () => {
-        return resources.filter(resource => {
+    const matchingResources = (resources: Resource[], selectedOptions: Record<number, string>) => {
+        const filtered = resources.filter(resource => {
             return (
                 (!selectedOptions[1] || resource['grade-level'].includes(selectedOptions[1])) &&
                 (!selectedOptions[2] || resource['media-type'] === selectedOptions[2]) &&
@@ -62,7 +54,24 @@ const QuizForm = () => {
                 (!selectedOptions[4] || resource['time-range'].includes(selectedOptions[4])) &&
                 (!selectedOptions[5] || resource.area.includes(selectedOptions[5]))
             );
-        }).slice(0, 3);
+        });
+        
+        // fisher-fates shuffle -- more reliable version of a randomization
+        for (let i = filtered.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [filtered[i], filtered[j]] = [filtered[j], filtered[i]];
+        }
+
+        // return up to 3 items, but if less than 3 are available, return all of them
+        return filtered.slice(0, 3);
+    };
+
+    // function to handle changing the selected options
+    const handleOptionChange = (value: string) => {
+        setSelectedOptions(prev => ({
+            ...prev,
+            [currentQuestionIndex + 1]: value
+        }));
     };
 
     // function to go to the next question after previous one has been answered
@@ -77,7 +86,8 @@ const QuizForm = () => {
     // function to submit the quiz
     const submitQuiz = () => {
         setProgressPercentage(100);
-        const matched = matchingResources();
+        const matched = matchingResources(resources, selectedOptions);
+        console.log('Matched resources:', matched); // debugging
         navigate('/quiz-results', { state: { selectedOptions, matchedResources: matched } });
     };
 
@@ -103,13 +113,13 @@ const QuizForm = () => {
                     </div>
 
                     <div className="progress-bar">
-                        <div className="flex flex-col gap-6 w-full max-w-md">
+                        <div className="flex flex-col gap-6 w-full max-w-full">
                             <Progress classNames={{
-                                base: "max-w-md",
-                                track: "drop-shadow-md border border-default",
+                                base: "max-w-full",
+                                track: "drop-shadow-lg border border-default",
                                 indicator: "bg-green-600",
                                 label: "tracking-wider font-medium text-default-600",
-                                value: "text-foreground/60",
+                                value: "text-foreground/60"
                             }}
                             color="success"
                             aria-label="Loading..."
@@ -147,9 +157,9 @@ const QuizForm = () => {
                         <Button 
                             className="next-button" 
                             onClick={currentQuestionIndex < questions.length - 1 ? nextQuestion : submitQuiz}
-                            disabled={!selectedOptions[currentQuestionIndex + 1]}
-                        >
-                            {currentQuestionIndex < questions.length - 1 ? "Next" : "Results"}
+                        disabled={!selectedOptions[(currentQuestionIndex + 1).toString()]}
+                    >
+                        {currentQuestionIndex < questions.length - 1 ? "Next" : "Results"}
                         </Button>
                     </div>
                 </>
