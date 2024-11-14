@@ -85,7 +85,7 @@ function Library() {
 
     return (
         <div>
-            <h1>Resource Library</h1>
+            <h1 className='resource'>Resource Library</h1>
             <Filter 
                 resourceTypes={resourceTypes} setSelectedResourceType={setSelectedResourceType}
                 environmentTopics={environment_topics} setSelectedEnvironmentTopic={setSelectedEnvironmentTopic}

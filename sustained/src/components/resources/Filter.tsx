@@ -44,8 +44,8 @@ export default function Filter(props: FilterData) {
     };
 
     return (
-        <div className='filter-box'>
-            <h2>Filter By:</h2>
+        <div className='filter-box resource'>
+            <h2 className='resource'>Filter By:</h2>
             {/* Resource Types */}
             <label htmlFor="resourceTypeFilter">Resource Type: </label>
             <select className='filter-option' id="resourceTypeFilter" onChange={handleResourceChange} >

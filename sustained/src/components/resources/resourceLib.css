@@ -8,7 +8,7 @@ body {
     margin-left: 10px;
 }
 
-label, select {
+.resource label, .resource select {
     display: block;
     margin-bottom: 5px;
     margin-top: 5px;
@@ -16,17 +16,19 @@ label, select {
 
 select.filter-option, input.filter-option {
     border: black solid 1px;
-    width: 150px;
+    width: 200px;
     box-sizing: border-box;
     margin-bottom: 5px;
     margin-top: 5px;
+    padding: 10px;
 }
 
-h1 {
+h1.resource {
     text-align: center;
+    margin-top: 5px;
 }
 
-h2 {
+h2.resource {
     text-align: left;
 }
 
@@ -39,27 +41,23 @@ button.filter-resources {
     margin-bottom: 5px;
 }
 
-p {
-    margin-left: 5px;
-}
-
-div.card {
+div.card.resource {
     margin: 10px;
     background-color: #f6f2e4;
     display: block;
     width: 95%;
 }
 
-div.card h1 {
+div.card.resource h1 {
     font-size: 1.25rem;
 }
 
-div.card p {
+div.card.resource p {
     font-size: 1rem;
 }
 
 @media (min-width: 700px) {
-    div.card {
+    div.card.resource {
         display: flex;
         flex-wrap: wrap;
     }
