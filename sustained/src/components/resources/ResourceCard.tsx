@@ -23,6 +23,7 @@ function ResourceCard(props: ResourceData) {
             <p>Source: {resource_type}</p>
             <p>Grade Level Comprehension: {grade_level}</p>
             <p>Date: {published_date}</p>
+            <button className="export-pdf">Download PDF</button>
         </div>
     )
 }
