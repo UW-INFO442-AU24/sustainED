@@ -23,6 +23,10 @@ select.filter-option, input.filter-option {
     padding: 10px;
 }
 
+select.filter-option:focus, input.filter-option:focus {
+    background-color: #cae8f3;
+}
+
 h1.resource {
     text-align: center;
     margin-top: 5px;
@@ -51,6 +55,14 @@ button.export-pdf {
     padding: 10px;
     margin-top: 10px;
     margin-left: 14rem;
+}
+
+button.filter-resources:hover {
+    background-color: darkgreen;
+}
+
+button.export-pdf:hover {
+    background-color: #4e4132;
 }
 
 p.filter-result {

@@ -84,7 +84,7 @@ function Library() {
     }, [selectedResourceType, selectedEnvironmentTopic, selectedGradeLevel, userSearch])
 
     return (
-        <div>
+        <div className="container">
             <h1 className='resource'>Resource Library</h1>
             <Filter 
                 resourceTypes={resourceTypes} setSelectedResourceType={setSelectedResourceType}
@@ -94,7 +94,7 @@ function Library() {
                 userSearch={setUserSearch}
             />    
             {filterRequestBoolean && <p className='filter-result'>{resultMessage}</p>}
-            <div className="container">
+            <div>
                 <div className='row'>
                     {filteredResources} 
                 </div>
