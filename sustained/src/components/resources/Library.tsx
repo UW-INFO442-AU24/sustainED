@@ -93,8 +93,13 @@ function Library() {
                 filterRequest={setFilterRequestBoolean} 
                 userSearch={setUserSearch}
             />    
-            {filterRequestBoolean && <p>{resultMessage}</p>}
-            {filteredResources}
+            {filterRequestBoolean && <p className='filter-result'>{resultMessage}</p>}
+            <div className="container">
+                <div className='row'>
+                    {filteredResources} 
+                </div>
+            </div>
+                
         </div>
     );
 }

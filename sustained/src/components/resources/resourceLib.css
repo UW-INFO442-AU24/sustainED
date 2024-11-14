@@ -53,6 +53,10 @@ button.export-pdf {
     margin-left: 14rem;
 }
 
+p.filter-result {
+    margin-left: 10px;
+}
+
 div.card.resource {
     margin: 10px;
     background-color: #f6f2e4;
