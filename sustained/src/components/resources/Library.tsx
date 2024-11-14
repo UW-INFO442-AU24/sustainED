@@ -2,6 +2,7 @@ import ResourceCard, { ResourceData } from './ResourceCard';
 import resourcesData from './resources.json'
 import { useState, useEffect, ReactNode } from 'react';
 import Filter from './Filter'
+import './resourceLib.css'
 
 function Library() {
     const resources: ResourceData[] = resourcesData as ResourceData[]  
@@ -83,8 +84,8 @@ function Library() {
     }, [selectedResourceType, selectedEnvironmentTopic, selectedGradeLevel, userSearch])
 
     return (
-        <div>
-            <h1>Resource Library</h1>
+        <div className="container">
+            <h1 className='resource'>Resource Library</h1>
             <Filter 
                 resourceTypes={resourceTypes} setSelectedResourceType={setSelectedResourceType}
                 environmentTopics={environment_topics} setSelectedEnvironmentTopic={setSelectedEnvironmentTopic}
@@ -92,8 +93,13 @@ function Library() {
                 filterRequest={setFilterRequestBoolean} 
                 userSearch={setUserSearch}
             />    
-            {filterRequestBoolean && <p>{resultMessage}</p>}
-            {filteredResources}
+            {filterRequestBoolean && <p className='filter-result'>{resultMessage}</p>}
+            <div>
+                <div className='row'>
+                    {filteredResources} 
+                </div>
+            </div>
+                
         </div>
     );
 }

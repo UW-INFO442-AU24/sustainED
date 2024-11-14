@@ -1,0 +1,92 @@
+body {
+    background-color: #fffcf5;
+    font-family: Arial, sans-serif;
+    color: black
+}
+
+.filter-box {
+    margin-left: 10px;
+}
+
+.resource label, .resource select {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+select.filter-option, input.filter-option {
+    border: black solid 1px;
+    width: 200px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+select.filter-option:focus, input.filter-option:focus {
+    background-color: #cae8f3;
+}
+
+h1.resource {
+    text-align: center;
+    margin-top: 5px;
+}
+
+h2.resource {
+    text-align: left;
+}
+
+button.filter-resources {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    width: 7.5rem;
+}
+
+button.export-pdf {
+    display: block;
+    position: relative;
+    color: white;
+    border-radius: 5px;
+    background-color: #7e6c55;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 14rem;
+}
+
+button.filter-resources:hover {
+    background-color: darkgreen;
+}
+
+button.export-pdf:hover {
+    background-color: #4e4132;
+}
+
+p.filter-result {
+    margin-left: 10px;
+}
+
+div.card.resource {
+    margin: 10px;
+    background-color: #f6f2e4;
+    display: block;
+    width: 95%;
+}
+
+div.card.resource h1 {
+    font-size: 1.25rem;
+}
+
+div.card.resource p {
+    font-size: 1rem;
+}
+
+@media (min-width: 700px) {
+    div.card.resource {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
