@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
         <header>
             <nav className='navbar'>
                 <div className="logo-container">
-                    <Link to="/"><img src={logo} alt="Logo" className="logo" /></Link>
+                    <Link to="/" onClick={() => setIsOpen(false)}><img src={logo} alt="Logo" className="logo" /></Link>
                 </div>  
                 <ul className={`${isOpen ? 'open' : ''}`}>
                     <li onClick={() => setIsOpen(false)}><Link to="/" className='link'>Home</Link></li>
