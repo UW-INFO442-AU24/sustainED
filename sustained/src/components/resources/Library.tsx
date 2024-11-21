@@ -86,6 +86,7 @@ function Library() {
     return (
         <div className="container">
             <h1 className='resource'>Resource Library</h1>
+            <p className='library-desc'>Search for a multitude of resources dedicated to climate change and sustainability!</p>
             <Filter 
                 resourceTypes={resourceTypes} setSelectedResourceType={setSelectedResourceType}
                 environmentTopics={environment_topics} setSelectedEnvironmentTopic={setSelectedEnvironmentTopic}

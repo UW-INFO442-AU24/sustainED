@@ -20,12 +20,12 @@ function ResourceCard(props: ResourceData) {
     return (
         <div className="col-sm-1 col-md-6">
             <div className="card resource">
-                <h1 className="resource">Title: {title}</h1>
-                <p>Description: {description}</p>
-                <p>Environment Topic: {environment_topic}</p>
-                <p>Source: {resource_type}</p>
-                <p>Grade Level Comprehension: {grade_level}</p>
-                <p>Date: {published_date}</p>
+                <h1 className="resource">{title}</h1>
+                <p>{description}</p>
+                <p><strong>Environment Topic:</strong> {environment_topic}</p>
+                <p><strong>Source:</strong> {resource_type}</p>
+                <p><strong>Grade Level Comprehension:</strong> {grade_level}</p>
+                <p><strong>Date:</strong> {published_date}</p>
                 <div>
                     <button className="export-pdf" aria-label="Export as PDF">Download PDF</button>
                     <FavoriteButton />
