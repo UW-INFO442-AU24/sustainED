@@ -12,6 +12,7 @@
     "@types/react-dom": "^18.3.1",
     "bootstrap": "^5.3.3",
     "firebase": "^11.0.1",
+    "framer-motion": "^11.11.17",
     "intl-messageformat": "^10.7.6",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
