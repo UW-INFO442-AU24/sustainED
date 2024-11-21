@@ -11,13 +11,13 @@ export function FavoriteButton() {
 
     if (isFavorite) {
         return (
-            <button className='favorite-button' onClick={toggleFavorite}>
+            <button className='favorite-button' aria-label='Unfavorite the resource?' onClick={toggleFavorite}>
                 <FaStar /> Favorited
             </button>
         )
     } else {
         return (
-            <button className='favorite-button' onClick={toggleFavorite}>
+            <button className='favorite-button' aria-label='Favorite the resource?' onClick={toggleFavorite}>
                 <FaRegStar /> Favorite?
             </button>
         )

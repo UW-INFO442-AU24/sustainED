@@ -83,7 +83,7 @@ export default function Filter(props: FilterData) {
                 onChange={handleSearch}
             />
             
-            <button className='filter-resources' type="button" onClick={submitFilter}>Filter</button>
+            <button className='filter-resources' aria-label='Filter resources' type="button" onClick={submitFilter}>Filter</button>
         </div>
     );
 }

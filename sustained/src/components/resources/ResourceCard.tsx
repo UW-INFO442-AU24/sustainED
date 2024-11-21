@@ -27,7 +27,7 @@ function ResourceCard(props: ResourceData) {
                 <p>Grade Level Comprehension: {grade_level}</p>
                 <p>Date: {published_date}</p>
                 <div>
-                    <button className="export-pdf">Download PDF</button>
+                    <button className="export-pdf" aria-label="Export as PDF">Download PDF</button>
                     <FavoriteButton />
                 </div>
             </div>
