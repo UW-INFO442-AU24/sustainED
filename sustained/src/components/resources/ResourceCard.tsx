@@ -1,3 +1,5 @@
+import { FavoriteButton } from "./FavoriteButton"
+
 export type ResourceData = {
     title: string
     description: string
@@ -24,7 +26,10 @@ function ResourceCard(props: ResourceData) {
                 <p>Source: {resource_type}</p>
                 <p>Grade Level Comprehension: {grade_level}</p>
                 <p>Date: {published_date}</p>
-                <button className="export-pdf">Download PDF</button>
+                <div>
+                    <button className="export-pdf">Download PDF</button>
+                    <FavoriteButton />
+                </div>
             </div>
         </div>
     )
