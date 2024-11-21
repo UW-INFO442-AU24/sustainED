@@ -36,6 +36,11 @@ h2.resource {
     text-align: left;
 }
 
+p.library-desc {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
 button.filter-resources {
     background-color: green;
     color: white;
@@ -63,6 +68,12 @@ button.favorite-button {
     padding: 10px;
     margin-top: 10px;
     margin-left: 14rem;
+    background-color: yellow;
+    border-radius: 5px;
+}
+
+button.favorite-button:hover {
+    background-color: darkgoldenrod;
 }
 
 button.filter-resources:hover {
