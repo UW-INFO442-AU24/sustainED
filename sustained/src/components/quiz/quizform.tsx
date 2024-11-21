@@ -18,12 +18,12 @@ export interface Resource {
     image: string;
 }
 
-
 const QuizForm = () => {
     const [selectedOptions, setSelectedOptions] = useState<Record<string, string>>({}); // keeping track of what is currently being selected -- starting with nothing selected/no default
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); // keeping track of what question user is currently on -- starting with question 1
-    const [progressPercentage, setProgressPercentage] = useState(0); // setting the progress percentage based on num of questions answered
-    const navigate = useNavigate();
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); // keeping track of what question user is currently on -- starting on question 1
+    const [progressPercentage, setProgressPercentage] = useState(0); // setting the progress percentage based on num of questions answered -- starting at 0%
+    const [matchedResources, setMatchedResources] = useState<Resource[]>([]);  // keeping track of resources that are matched based on the selected options in the quiz
+    const navigate = useNavigate(); // to navigate to diff page
 
     // questions for the quiz
     const questions = [
@@ -46,24 +46,27 @@ const QuizForm = () => {
 
     // function to match resources based on selected options
     const matchingResources = (resources: Resource[], selectedOptions: Record<number, string>) => {
-        const filtered = resources.filter(resource => {
-            return (
+        const matchedResources = resources.filter(resource => {
+            const isMatch = (
                 (!selectedOptions[1] || resource['grade-level'].includes(selectedOptions[1])) &&
                 (!selectedOptions[2] || resource['media-type'] === selectedOptions[2]) &&
                 (!selectedOptions[3] || resource['subject-area'].includes(selectedOptions[3])) &&
                 (!selectedOptions[4] || resource['time-range'].includes(selectedOptions[4])) &&
                 (!selectedOptions[5] || resource.area.includes(selectedOptions[5]))
             );
+            console.log(`Resource ${resource.id} match: ${isMatch}`); // debugging
+            return isMatch;        
         });
-        
-        // fisher-fates shuffle -- more reliable version of a randomization
-        for (let i = filtered.length - 1; i > 0; i--) {
+
+        // using fisher-fates shuffle -- a more reliable way to randomize/shuffle resources
+        for (let i = matchedResources.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
-            [filtered[i], filtered[j]] = [filtered[j], filtered[i]];
+            [matchedResources[i], matchedResources[j]] = [matchedResources[j], matchedResources[i]];
         }
 
         // return up to 3 items, but if less than 3 are available, return all of them
-        return filtered.slice(0, 3);
+        setMatchedResources(matchedResources);
+        return matchedResources.slice(0, 3);
     };
 
     // function to handle changing the selected options

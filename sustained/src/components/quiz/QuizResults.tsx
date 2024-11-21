@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Card, CardFooter, Button } from "@nextui-org/react";
 import { useNavigate } from 'react-router-dom';
 import './quiz.css';
 
-// define the Resource type to match the data structure
+// defining the resource type
 interface Resource {
     id: number;
     title: string;
@@ -19,10 +19,17 @@ interface Resource {
 
 const QuizResults = () => {
     const location = useLocation();
-    const { matchedResources } = location.state as { matchedResources: Resource[] } || {}; // retrieve matched resources from state
+    const [matchedResources, setMatchedResources] = useState<Resource[]>([]);
     const navigate = useNavigate(); 
 
-    console.log('Received matched resources:', matchedResources); // Add this line for debugging
+    useEffect(() => {
+        const state = location.state as { matchedResources?: Resource[] };
+        if (state && state.matchedResources) {
+            setMatchedResources(state.matchedResources);
+        }
+    }, [location.state]);
+
+    //console.log('Matched resources:', matchedResources); // for debugging
 
     return (
         <div className='result-container'>
