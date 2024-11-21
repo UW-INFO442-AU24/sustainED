@@ -22,7 +22,7 @@ const events = [
     time: '12:30 PM',
     location: 'Cispus Learning Center (2142 Cispus Rd, Randle, WA 98377)',
     sustainabilityType: 'General',
-    link: 'hhttps://www.e3washington.org/conference'
+    link: 'https://www.e3washington.org/conference'
   },
   {
     id: 3,
@@ -43,6 +43,46 @@ const events = [
     location: 'The Olsen Room (Gowen Hall 1A, Seattle, WA 98105)',
     sustainabilityType: 'Conservation',
     link: 'http://calendar.washington.edu/sea_essuw/177953379/InclusiveConservationImpactEvaluationLessonsIncludingforDebtRelief'
+  },
+  {
+    id: 5,
+    image: '/eventimg/event5.jpg',
+    title: "Washington Climate Educator Book Club: Intro to Climate Work",
+    date: '2024-11-19',
+    time: '5:00 PM - 7:00 PM',
+    location: 'Virtual',
+    sustainabilityType: 'General',
+    link: 'https://www.climetime.org/event/washington-climate-educator-book-club/?occurrence=2024-11-19&time=1732035600'
+  },
+  {
+    id: 6,
+    image: '/eventimg/event5.jpg',
+    title: "Washington Climate Educator Book Club: Climate Change in WA",
+    date: '2025-02-25',
+    time: '5:00 PM - 7:00 PM',
+    location: 'Virtual',
+    sustainabilityType: 'General',
+    link: 'https://www.climetime.org/event/washington-climate-educator-book-club/?occurrence=2025-02-25&time=1740502800'
+  },
+  {
+    id: 7,
+    image: '/eventimg/event5.jpg',
+    title: "Washington Climate Educator Book Club: Group Share",
+    date: '2025-05-06',
+    time: '5:00 PM - 7:00 PM',
+    location: 'Virtual',
+    sustainabilityType: 'General',
+    link: 'https://www.climetime.org/event/washington-climate-educator-book-club/?occurrence=2025-05-06&time=1746550800'
+  },
+  {
+    id: 8,
+    image: '/eventimg/event8.jpg',
+    title: "Washington Oregon Cascadia Higher Education Sustainability Conference",
+    date: '2025-03-05',
+    time: '8:00 AM - 3:00 PM',
+    location: 'Portland Community College Sylvania Campus (12000 SW 49th Avenue Portland, OR 97219)',
+    sustainabilityType: 'General',
+    link: 'https://wohesc.org/'
   },
 ];
 
@@ -75,7 +115,7 @@ const EventPage = () => {
   return (
       <div className="container">
           <h1>Upcoming Events</h1>
-          <p className="subheading">Find upcoming environmental sustainability events happening in Seattle!</p>
+          <p className="subheading">Find upcoming environmental sustainability events for educators in Washington!</p>
           
           <div className="filter-sort-container">
               <Dropdown onSelect={(eventKey) => filterEvents(eventKey || 'All')}>
