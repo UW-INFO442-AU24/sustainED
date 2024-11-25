@@ -5,7 +5,7 @@ import QuizIntro from './components/quiz/QuizIntro';
 import QuizForm from './components/quiz/quizform';
 import QuizResults from './components/quiz/QuizResults';
 import Library from './components/resources/Library';
-import Register from './components/register/register'; 
+import Register from './components/Register/register'; 
 import Home from './components/home/homePage'
 import EventPage from './components/events/eventpage';
 import './components/register/registerStyle.css'; 
