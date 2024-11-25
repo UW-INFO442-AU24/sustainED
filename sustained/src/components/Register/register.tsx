@@ -1,11 +1,7 @@
 import React, { FormEvent, useState, ChangeEvent } from 'react';
 import './registerStyle.css';
-import { getDatabase, ref } from 'firebase/database';
-import dataApp from '../../firebase-config'
+import { getDatabase, ref, push, set as firebaseSet} from 'firebase/database';
 //get a reference to the database service
-const db = getDatabase();
-
-const database = getDatabase(dataApp);
 
 const Form = () => {
   // state object to manage the form data
@@ -27,6 +23,10 @@ const Form = () => {
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     console.log(formData);
+    const db = getDatabase();
+    const allUsersRef = ref(db, "users" );
+    const newUserRef = push(allUsersRef)
+    firebaseSet(newUserRef, formData)
   };
 
   return (
