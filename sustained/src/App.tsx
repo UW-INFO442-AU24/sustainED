@@ -8,7 +8,7 @@ import Library from './components/resources/Library';
 import Register from './components/Register/register'; 
 import Home from './components/home/homePage'
 import EventPage from './components/events/eventpage';
-import './components/register/registerStyle.css'; 
+import './components/Register/registerStyle.css'; 
 import { NextUIProvider } from '@nextui-org/react';
 
 // display components here
