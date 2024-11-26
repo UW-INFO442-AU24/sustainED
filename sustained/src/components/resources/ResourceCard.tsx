@@ -33,7 +33,7 @@ function ResourceCard(props: ResourceData) {
                         document={MyDocument(props.title, props.description, props.published_date)}>
                             Download PDF
                     </PDFDownloadLink>
-                    {/* <FavoriteButton /> */}
+                    <FavoriteButton />
                 </div>
             </div>
         </div>
