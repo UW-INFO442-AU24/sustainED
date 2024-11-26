@@ -100,7 +100,6 @@ function Library() {
                     {filteredResources} 
                 </div>
             </div>
-                
         </div>
     );
 }
