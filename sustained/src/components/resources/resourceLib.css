@@ -109,4 +109,7 @@ div.card.resource p {
         display: flex;
         flex-wrap: wrap;
     }
+    button.export-pdf, button.favorite-button {
+        margin-left: 28rem;
+    }
 }
