@@ -59,6 +59,7 @@ button.export-pdf, .pdf-download {
     padding: 10px;
     margin-top: 10px;
     margin-left: 12rem;
+    text-align: center;
 }
 
 button.favorite-button {
@@ -108,7 +109,7 @@ div.card.resource p {
         display: flex;
         flex-wrap: wrap;
     }
-    button.export-pdf, button.favorite-button {
+    button.export-pdf, button.favorite-button, .pdf-download {
         margin-left: 28rem;
     }
 }
