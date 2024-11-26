@@ -336,4 +336,9 @@ h2,
   .quiz-container {
     max-width: 900px;
   }
+
+  .question-header,
+  .question-text {
+    font-size: large;
+  }
 }

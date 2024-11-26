@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { RadioGroup, Radio, Button, cn, Progress } from "@nextui-org/react";
 import { useNavigate } from 'react-router-dom';
+import { getDatabase, ref, push, set as firebaseSet} from 'firebase/database';
 import './quiz.css';
 import resourcesData from '../../data/resources.json';
 const resources: Resource[] = resourcesData.resources; // initializing resources as an array of resource objects
@@ -22,7 +23,7 @@ const QuizForm = () => {
     const [selectedOptions, setSelectedOptions] = useState<Record<string, string>>({}); // keeping track of what is currently being selected -- starting with nothing selected/no default
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); // keeping track of what question user is currently on -- starting on question 1
     const [progressPercentage, setProgressPercentage] = useState(0); // setting the progress percentage based on num of questions answered -- starting at 0%
-    const [matchedResources, setMatchedResources] = useState<Resource[]>([]);  // keeping track of resources that are matched based on the selected options in the quiz
+    const [matchedResources, setMatchedResources] = useState<Resource[]>([]); // keeping track of resources that are matched based on the selected options in the quiz
     const navigate = useNavigate(); // to navigate to diff page
 
     // questions for the quiz
