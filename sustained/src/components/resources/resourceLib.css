@@ -59,7 +59,7 @@ button.export-pdf {
     background-color: #7e6c55;
     padding: 10px;
     margin-top: 10px;
-    margin-left: 14rem;
+    margin-left: 12rem;
 }
 
 button.favorite-button {
@@ -67,7 +67,7 @@ button.favorite-button {
     border-radius: 5px;
     padding: 10px;
     margin-top: 10px;
-    margin-left: 14rem;
+    margin-left: 12rem;
     background-color: yellow;
     border-radius: 5px;
 }
@@ -108,5 +108,8 @@ div.card.resource p {
     div.card.resource {
         display: flex;
         flex-wrap: wrap;
+    }
+    button.export-pdf, button.favorite-button {
+        margin-left: 28rem;
     }
 }
