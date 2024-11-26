@@ -32,11 +32,131 @@
     "grade_level": 9
   },
   {
-    "title": "The Water Cycle: From Raindrops to Rivers",
-    "description": "An educational video explaining the stages of the water cycle and its significance in the environment.",
-    "resource_type": "video",
-    "published_date": "2019-02-05",
-    "environment_topic": "water resources",
-    "grade_level": 4
+    "title": "The Future of Solar Energy",
+    "description": "A detailed look at advancements in solar technology and its potential to replace fossil fuels.",
+    "resource_type": "book",
+    "published_date": "2021-04-12",
+    "environment_topic": "renewable energy",
+    "grade_level": 9
+  },
+  {
+    "title": "Deforestation: Causes and Solutions",
+    "description": "An article examining the drivers behind deforestation and strategies for sustainable forestry.",
+    "resource_type": "article",
+    "published_date": "2022-09-18",
+    "environment_topic": "deforestation",
+    "grade_level": 8
+  },
+  {
+    "title": "The Plastic Pollution Crisis",
+    "description": "A website providing resources and action plans to tackle plastic waste in our oceans.",
+    "resource_type": "website",
+    "published_date": "2023-02-14",
+    "environment_topic": "pollution",
+    "grade_level": 7
+  },
+  {
+    "title": "Biodiversity in Coral Reefs",
+    "description": "An ebook exploring the rich biodiversity in coral reef ecosystems and their ecological significance.",
+    "resource_type": "ebook",
+    "published_date": "2020-07-25",
+    "environment_topic": "ecosystems",
+    "grade_level": 7
+  },
+  {
+    "title": "Understanding Greenhouse Gases",
+    "description": "An engaging article breaking down the science behind greenhouse gases and their role in global warming.",
+    "resource_type": "article",
+    "published_date": "2023-06-03",
+    "environment_topic": "climate change",
+    "grade_level": 10
+  },
+  {
+    "title": "Ocean Cleanup Initiatives",
+    "description": "A book detailing current global efforts to remove plastic and waste from the ocean.",
+    "resource_type": "book",
+    "published_date": "2021-11-10",
+    "environment_topic": "pollution",
+    "grade_level": 8
+  },
+  {
+    "title": "Sustainable Living Practices",
+    "description": "A website providing practical advice for adopting sustainable habits at home and in the community.",
+    "resource_type": "website",
+    "published_date": "2022-03-05",
+    "environment_topic": "sustainability",
+    "grade_level": 6
+  },
+  {
+    "title": "Endangered Species: A Global Issue",
+    "description": "An ebook exploring the reasons behind species endangerment and efforts to reverse it.",
+    "resource_type": "ebook",
+    "published_date": "2020-10-08",
+    "environment_topic": "wildlife conservation",
+    "grade_level": 6
+  },
+  {
+    "title": "Recycling in Everyday Life",
+    "description": "A guidebook promoting recycling practices and explaining how it benefits the environment.",
+    "resource_type": "book",
+    "published_date": "2023-04-20",
+    "environment_topic": "recycling",
+    "grade_level": 8
+  },
+  {
+    "title": "The Impact of Urbanization on Natural Habitats",
+    "description": "An article analyzing how expanding cities affect natural habitats and possible solutions.",
+    "resource_type": "article",
+    "published_date": "2021-12-15",
+    "environment_topic": "urbanization",
+    "grade_level": 9
+  },
+  {
+    "title": "The Benefits of Wind Energy",
+    "description": "A website explaining how wind turbines generate electricity and their environmental advantages.",
+    "resource_type": "website",
+    "published_date": "2022-08-09",
+    "environment_topic": "renewable energy",
+    "grade_level": 9
+  },
+  {
+    "title": "Rainforest Preservation Projects",
+    "description": "An ebook detailing ongoing efforts to preserve rainforests and combat illegal logging.",
+    "resource_type": "ebook",
+    "published_date": "2021-01-30",
+    "environment_topic": "deforestation",
+    "grade_level": 8
+  },
+  {
+    "title": "Carbon Footprint Reduction Tips",
+    "description": "A practical article on reducing individual and collective carbon footprints.",
+    "resource_type": "article",
+    "published_date": "2023-07-19",
+    "environment_topic": "climate change",
+    "grade_level": 10
+  },
+  {
+    "title": "Protecting Marine Life from Pollution",
+    "description": "A website highlighting the effects of pollution on marine ecosystems and mitigation measures.",
+    "resource_type": "website",
+    "published_date": "2023-05-12",
+    "environment_topic": "pollution",
+    "grade_level": 7
+  },
+  {
+    "title": "Hydropower: Harnessing Water for Energy",
+    "description": "A book on the principles and applications of hydropower as a renewable energy source.",
+    "resource_type": "book",
+    "published_date": "2020-06-18",
+    "environment_topic": "renewable energy",
+    "grade_level": 9
+  },
+  {
+    "title": "The Role of Trees in Climate Regulation",
+    "description": "An article emphasizing the importance of trees in mitigating climate change and preserving biodiversity.",
+    "resource_type": "article",
+    "published_date": "2022-10-29",
+    "environment_topic": "ecosystems",
+    "grade_level": 7
   }
 ]
