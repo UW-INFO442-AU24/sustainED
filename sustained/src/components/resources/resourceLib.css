@@ -51,15 +51,15 @@ button.filter-resources {
     width: 7.5rem;
 }
 
-button.export-pdf {
+button.export-pdf, .pdf-download {
     display: block;
-    /* position: relative; */
     color: white;
     border-radius: 5px;
     background-color: #7e6c55;
     padding: 10px;
     margin-top: 10px;
     margin-left: 12rem;
+    text-align: center;
 }
 
 button.favorite-button {
@@ -80,7 +80,7 @@ button.filter-resources:hover {
     background-color: darkgreen;
 }
 
-button.export-pdf:hover {
+button.export-pdf:hover, .pdf-download:hover {
     background-color: #4e4132;
 }
 
@@ -109,7 +109,7 @@ div.card.resource p {
         display: flex;
         flex-wrap: wrap;
     }
-    button.export-pdf, button.favorite-button {
+    button.export-pdf, button.favorite-button, .pdf-download {
         margin-left: 28rem;
     }
 }
