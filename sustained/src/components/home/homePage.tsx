@@ -20,20 +20,18 @@ const Home = () => {
         <div className="col-md-4 col-sm-12" id="home-image-id">
           <img
             src={homeImage}
-            alt="hands holding the earth"
-            className="img-fluid" // Ensures image scales proportionally
+            alt="planet surrounded by the recycling logo"
+            className="img-fluid" 
           />
         </div>
       </div>
 
-      {/* Home Cards Section */}
       <div className="row text-center mt-4">
         <div className="col">
           <HomeCards />
         </div>
       </div>
 
-      {/* Register Section */}
       <div className="row spaced-section text-center">
         <div className="col-md-6 col-sm-12">
           <Register />
