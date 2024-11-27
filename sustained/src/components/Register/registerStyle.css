@@ -1,11 +1,20 @@
-    #register-container {
+   html {
+    overflow-y: scroll;
+   }
+   
+#mainContainer {
+  padding-top: 2%;
+}
+
+   #register-container {
         background-color: #FEF4D9;
     }
     
     #bootstrap-override {
-        background-color: #FEF4D9;
-        height: 250px;
-    }
+      background-color: #FEF4D9;
+      height: 250px;
+  }
+
   .text-center h1 {
     font-size: 2em;
     color: black;
@@ -31,7 +40,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 8px 16px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden; 
@@ -40,7 +49,7 @@
   .card p {
     font-size: x-large;
     text-align: center;
-    margin: 5px 0;
+    margin: 5px 5px;
     flex: 1;
   }
   
@@ -54,6 +63,49 @@
     cursor: pointer;
     font-size: 18px;
     margin-top: 30px; 
+    text-decoration: none;
     transition: background-color 0.3s;
   }
   
+  #home-image-id {
+    width: 600px;
+    height: auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: 0;;
+  }
+
+  #home-image-id img {
+    border: 2px solid #8BA68C; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  }
+
+  #description {
+    font-size: 1.8em;
+  }
+
+  #registration-description {
+    font-size: 1.6em;
+  }
+
+  @media (max-width: 768px) {
+    #home-image-id {
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    #description {
+      font-size: 1.2em;
+    }
+  
+    .spaced-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .card {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }

@@ -1,4 +1,4 @@
-import { FavoriteButton } from "./FavoriteButton"
+import { FavoriteButton } from "./FavoriteButton";
 
 export type ResourceData = {
     title: string
