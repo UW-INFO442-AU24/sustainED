@@ -5,43 +5,65 @@ body {
 
 .container {
     padding: 20px;
-    max-width: 1500px;
+    max-width: 1200px;
     margin: auto;
 }
 
+.align-left-container {
+    max-width: 600px; 
+    margin: 0 auto 20px; 
+    text-align: left;
+}
+
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem; 
     font-weight: bolder;
     color: #333;
     margin-bottom: 10px;
     padding-bottom: 8px;
 }
 
-.subheading {
-    font-size: 1.25rem;
+h2 {
+    font-size: 0.9rem; 
+    font-weight: normal;
     color: #666;
     margin-bottom: 20px;
 }
 
-p {
-    color: #666;
+.search-container {
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 600px; 
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: block;
 }
 
 .filter-sort-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
-    align-items: center;
     margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px; 
+    justify-content: flex-start; 
 }
 
 .dropdown-button, .sort-button {
     background-color: #7e6c55;
     color: white;
     border: none;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    width: 150px;
+    width: auto;
 }
 
 .dropdown-button:hover, .sort-button:hover {
@@ -50,29 +72,34 @@ p {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); 
     gap: 30px;
+    justify-content: center;
     margin-top: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .event-card {
     display: flex;
+    flex-direction: row;
     background-color: #f6f2e4;
     border-radius: 8px;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
+    position: relative;
     align-items: center;
-}
-
-.event-card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%; 
+    max-width: 600px; 
+    height: 300px;
 }
 
 .event-card img {
     width: 200px;
+    max-height: 200px;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 8px;
     margin-right: 15px;
 }
 
@@ -80,21 +107,21 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
-    max-width: 500px; 
+    flex-grow: 1;
 }
 
 .event-card h2 {
     font-size: 1.25rem;
     margin: 0;
     text-align: left;
-    padding-bottom: 23px;
-    word-wrap: break-word; 
+    word-wrap: break-word;
 }
 
 .event-card p {
+    font-size: 1rem;
     color: #555;
     margin: 5px 0;
+    text-align: left;
 }
 
 .learn-more-button {
@@ -103,61 +130,53 @@ p {
     padding: 10px;
     border-radius: 5px;
     text-decoration: none;
-    align-self: flex-end;
-    margin-top: auto;
+    position: absolute; 
+    bottom: 15px; 
+    right: 15px; 
 }
 
 .learn-more-button:hover {
     background-color: #71614c;
 }
 
-@media (max-width: 768px) {
+/* Responsive Styles */
+@media (max-width: 1024px) { 
     .grid-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .event-card {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) { 
+    .grid-container {
+        grid-template-columns: 1fr; 
+        padding: 0 15px; 
     }
 
     .event-card {
         flex-direction: column;
         text-align: center;
         align-items: center;
+        height: auto;
     }
 
     .event-card img {
         width: 100%;
-        height: 150px;
-        margin-right: 0;
+        height: auto;
+        max-height: 300px;
         margin-bottom: 15px;
     }
 
     .event-card-content {
         align-items: center;
-    }
-
-    .event-card h2 {
         text-align: center;
     }
 
     .learn-more-button {
-        align-self: center;
         margin-top: 15px;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 991px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-
-    .event-card img {
-        width: 150px;
-    }
-
-    .event-card-content {
-        align-items: flex-start;
-    }
-
-    .learn-more-button {
-        align-self: center;
-        margin-top: 15px;
+        position: relative; 
     }
 }
