@@ -38,19 +38,19 @@ const QuizResults = () => {
 
             {matchedResources.length > 0 ? (
                 <div className='cards-container'>
-                    {matchedResources.map((resource) => (
-                        <Card key={resource.id} isFooterBlurred className="resource-card">
+                    {matchedResources.map((resource, index) => (
+                        <Card key={`${resource.id}-${index}`} isFooterBlurred className="resource-card">
                             <img
                                 alt="resource background"
                                 className="z-0 w-full h-full object-cover"
                                 src={resource.image}
-                            />
+                                />
                             <CardFooter className="absolute bg-black/50 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
                                 <div className="flex flex-grow gap-2 items-center">
                                     <div className="flex flex-col">
                                         <h4 className="text-white/90 font-medium text-xxl">{resource.title}</h4>
                                         <p className="text-small text-white/60">Type: {resource["media-type"]}</p>
-                                        <p className="text-small text-white/60">Grade Level: {resource["grade-level"].join(", ")}</p>
+                                        <p className="text-small text-white/60">Grade Level: {resource["grade-level"]}</p>
                                     </div>
                                 </div>
                                 <Button radius="full" size="sm" as="a" href={resource["external-link"]} target="_blank" rel="noopener noreferrer">

@@ -1,22 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { RadioGroup, Radio, Button, cn, Progress } from "@nextui-org/react";
 import { useNavigate } from 'react-router-dom';
-import { getDatabase, ref, push, set as firebaseSet} from 'firebase/database';
+import { getDatabase, ref, get} from 'firebase/database';
 import './quiz.css';
-import resourcesData from '../../data/resources.json';
-const resources: Resource[] = resourcesData.resources; // initializing resources as an array of resource objects
 
 // defining the props of the resource array 
 export interface Resource {
-    id: number;
-    title: string;
+    area: string[];
+    "external-link": string;
     "grade-level": string[];
+    id: number;
+    image: string;
     "media-type": string;
     "subject-area": string[];
     "time-range": string[];
-    area: string[];
-    "external-link": string;
-    image: string;
+    title: string;
 }
 
 const QuizForm = () => {
@@ -24,6 +22,7 @@ const QuizForm = () => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); // keeping track of what question user is currently on -- starting on question 1
     const [progressPercentage, setProgressPercentage] = useState(0); // setting the progress percentage based on num of questions answered -- starting at 0%
     const [matchedResources, setMatchedResources] = useState<Resource[]>([]); // keeping track of resources that are matched based on the selected options in the quiz
+    const [resources, setResources] = useState<Resource[]>([]);  // state to store resources fetched from Firebase
     const navigate = useNavigate(); // to navigate to diff page
 
     // questions for the quiz
@@ -45,28 +44,54 @@ const QuizForm = () => {
           options: ["Causes of climate change", "Solutions to climate change", "Impacts of climate change"]}
     ];
 
+    // fetch resources from Firebase Realtime Database
+    useEffect(() => {
+        const fetchResources = async () => {
+          try {
+            const db = getDatabase();
+            const resourcesRef = ref(db, '/resources');
+            const snapshot = await get(resourcesRef);
+            if (snapshot.exists()) {
+              const data = snapshot.val();
+              const resourcesArray: Resource[] = Object.values(data);
+              setResources(resourcesArray);
+            } else {
+              console.log("No data available to fetch");
+            }
+          } catch (error) {
+            console.error("Error fetching resources:", error);
+          }
+        };
+        fetchResources();
+      }, []);  
+    
+
     // function to match resources based on selected options
-    const matchingResources = (resources: Resource[], selectedOptions: Record<number, string>) => {
-        const matchedResources = resources.filter(resource => {
+    const matchingResources = (resources: Resource[], selectedOptions: Record<string, string>) => {
+        const flatResources = resources[0]; 
+        if (!Array.isArray(flatResources)) {
+            console.error("Expected a flat array inside resources[0], but got:", flatResources);
+            return [];
+        }
+
+        const matchedResources = flatResources.filter(resource => {
             const isMatch = (
-                (!selectedOptions[1] || resource['grade-level'].includes(selectedOptions[1])) &&
-                (!selectedOptions[2] || resource['media-type'] === selectedOptions[2]) &&
-                (!selectedOptions[3] || resource['subject-area'].includes(selectedOptions[3])) &&
-                (!selectedOptions[4] || resource['time-range'].includes(selectedOptions[4])) &&
-                (!selectedOptions[5] || resource.area.includes(selectedOptions[5]))
+                (!selectedOptions['5'] || (resource.area && resource.area.includes(selectedOptions['5']))) &&
+                (!selectedOptions['1'] || (resource['grade-level'] && resource['grade-level'].includes(selectedOptions['1']))) &&
+                (!selectedOptions['2'] || (resource['media-type'] && resource['media-type'] === selectedOptions['2'])) &&
+                (!selectedOptions['3'] || (resource['subject-area'] && resource['subject-area'].includes(selectedOptions['3']))) &&
+                (!selectedOptions['4'] || (resource['time-range'] && resource['time-range'].includes(selectedOptions['4'])))
             );
             console.log(`Resource ${resource.id} match: ${isMatch}`); // debugging
             return isMatch;        
         });
-
-        // using fisher-fates shuffle -- a more reliable way to randomize/shuffle resources
+        
+        // fisher-Yates shuffle
         for (let i = matchedResources.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [matchedResources[i], matchedResources[j]] = [matchedResources[j], matchedResources[i]];
         }
-
-        // return up to 3 items, but if less than 3 are available, return all of them
-        setMatchedResources(matchedResources);
+    
         return matchedResources.slice(0, 3);
     };
 
@@ -90,8 +115,9 @@ const QuizForm = () => {
     // function to submit the quiz
     const submitQuiz = () => {
         setProgressPercentage(100);
-        const matched = matchingResources(resources, selectedOptions);
-        console.log('Matched resources:', matched); // debugging
+        const matched = matchingResources(resources, selectedOptions as Record<string, string>);
+        console.log('Matched resources after submitting quiz:', matched);
+        setMatchedResources(matched);
         navigate('/quiz-results', { state: { selectedOptions, matchedResources: matched } });
     };
 
