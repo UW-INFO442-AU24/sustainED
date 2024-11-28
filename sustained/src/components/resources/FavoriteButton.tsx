@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FaRegStar, FaStar } from "react-icons/fa"
 
+
 export function FavoriteButton() {
     const [isFavorite, setIsFavorite] = useState<boolean>(false)
 

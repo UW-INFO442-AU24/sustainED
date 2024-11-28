@@ -32,7 +32,7 @@ const Form = () => {
   return (
     <div className="container d-flex justify-content-center align-items-center">
       <div className="card p-4" id="register-container">
-        <div className="card-header text-center mb-4">
+        <div className="text-center mb-4">
           <h1>Register Now</h1>
         </div>
         <form onSubmit={handleSubmit}>

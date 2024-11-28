@@ -7,17 +7,17 @@ const HomeCards = () => {
             <div className="card" id="bootstrap-override">
                 <p><strong>Resource Library</strong></p>
                 <p>Search through our plethora of resources</p>
-                <button className="card-button">Browse Here</button>
+                <a className="card-button" href='/library'> Browse Here</a>
             </div>
             <div className="card" id="bootstrap-override">
                 <p><strong>Events</strong></p>
                 <p>Explore and sign up for events in your areas</p>
-                <button className="card-button">Browse Here</button>
+                <a className="card-button" href='/events'> Browse Here</a>
             </div>
             <div className="card" id="bootstrap-override">
                 <p><strong>Unsure where to begin?</strong></p>
-                <p>Take our quiz to get recommendations on resources for you to use</p>
-                <button className="card-button">Start quiz</button>
+                <p>Take our quiz and recommendations on resources </p>
+                <a className="card-button" href='/quiz-intro'> Start Quiz</a>
             </div>
         </div>
   )
