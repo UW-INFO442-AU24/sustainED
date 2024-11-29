@@ -1,162 +1,132 @@
 [
   {
+    "id": 0,
     "title": "Exploring the Rainforest Ecosystem",
     "description": "An in-depth look at the biodiversity within rainforest ecosystems and the importance of preserving these environments.",
-    "resource_type": "book",
+    "resource_type": "Book",
     "published_date": "2022-05-15",
-    "environment_topic": "ecosystems",
-    "grade_level": 7
+    "environment_topic": "Ecosystems",
+    "image": "https://cff2.earth.com/uploads/2024/02/14101624/amazon_rainforest_approaching-widespread-collapse_1m.jpg",
+    "grade_level": 9
   },
   {
+    "id": 1,
     "title": "Climate Change and Its Impact on Coastal Cities",
     "description": "A comprehensive article on how rising sea levels and climate change affect coastal urban areas.",
-    "resource_type": "article",
+    "resource_type": "Article",
     "published_date": "2023-01-10",
-    "environment_topic": "climate change",
+    "environment_topic": "Climate Change",
+    "image": "https://images.ctfassets.net/cnu0m8re1exe/CE7xNIy8RRYI6jQIgtGDA/738b8116c3d974125a8fdd9e6a59396c/risingsealevels.jpg?fm=jpg&fl=progressive&w=660&h=433&fit=fill",
     "grade_level": 10
   },
-  {
-    "title": "Wildlife Conservation Efforts",
-    "description": "A website dedicated to global wildlife conservation efforts, detailing projects and initiatives aimed at preserving endangered species.",
-    "resource_type": "website",
-    "published_date": "2021-08-30",
-    "environment_topic": "wildlife conservation",
-    "grade_level": 6
-  },
-  {
+  { 
+    "id": 2,
     "title": "Introduction to Renewable Energy Sources",
     "description": "A guide for students to understand various renewable energy sources, including solar, wind, and hydropower.",
-    "resource_type": "ebook",
+    "resource_type": "Ebook",
     "published_date": "2020-11-20",
-    "environment_topic": "renewable energy",
-    "grade_level": 9
+    "environment_topic": "Renewable Energy",
+    "image": "https://www.canhydro.com/wp-content/uploads/2023/06/solar-wind-hydro.jpg",
+    "grade_level": 11
   },
-  {
+  { 
+    "id": 3,
     "title": "The Future of Solar Energy",
     "description": "A detailed look at advancements in solar technology and its potential to replace fossil fuels.",
-    "resource_type": "book",
+    "resource_type": "Book",
     "published_date": "2021-04-12",
-    "environment_topic": "renewable energy",
-    "grade_level": 9
+    "environment_topic": "Renewable Energy",
+    "image": "https://media.licdn.com/dms/image/v2/D4D12AQGzt3phU9sabw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1688630494595?e=2147483647&v=beta&t=AqzbIAxTsZKLvLUUcV4BisiUJKpmbJGdR4eM50Rry1s",
+    "grade_level": 12
   },
-  {
-    "title": "Deforestation: Causes and Solutions",
-    "description": "An article examining the drivers behind deforestation and strategies for sustainable forestry.",
-    "resource_type": "article",
-    "published_date": "2022-09-18",
-    "environment_topic": "deforestation",
-    "grade_level": 8
-  },
-  {
+  { 
+    "id": 4,
     "title": "The Plastic Pollution Crisis",
     "description": "A website providing resources and action plans to tackle plastic waste in our oceans.",
-    "resource_type": "website",
+    "resource_type": "Website",
     "published_date": "2023-02-14",
-    "environment_topic": "pollution",
-    "grade_level": 7
+    "environment_topic": "Pollution",
+    "image": "https://cdn.britannica.com/81/155881-050-38801D86/waste-beach-land-pollution-soil-water-health.jpg",
+    "grade_level": 9
   },
-  {
+  { 
+    "id": 5,
     "title": "Biodiversity in Coral Reefs",
     "description": "An ebook exploring the rich biodiversity in coral reef ecosystems and their ecological significance.",
-    "resource_type": "ebook",
+    "resource_type": "Ebook",
     "published_date": "2020-07-25",
-    "environment_topic": "ecosystems",
-    "grade_level": 7
+    "environment_topic": "Ecosystems",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH9qJsxv_DVvsYx1Ak4qyIK3yz3SnrL_jXvw&s",
+    "grade_level": 10
   },
   {
+    "id": 6,
     "title": "Understanding Greenhouse Gases",
     "description": "An engaging article breaking down the science behind greenhouse gases and their role in global warming.",
-    "resource_type": "article",
+    "resource_type": "Ebook",
     "published_date": "2023-06-03",
-    "environment_topic": "climate change",
-    "grade_level": 10
+    "environment_topic": "Climate Change",
+    "image": "https://media.geeksforgeeks.org/wp-content/uploads/20230102151906/Greenhouse-gases.png",
+    "grade_level": 11
   },
   {
+    "id": 7,
     "title": "Ocean Cleanup Initiatives",
     "description": "A book detailing current global efforts to remove plastic and waste from the ocean.",
-    "resource_type": "book",
+    "resource_type": "Book",
     "published_date": "2021-11-10",
-    "environment_topic": "pollution",
-    "grade_level": 8
+    "environment_topic": "Pollution",
+    "image": "https://media.istockphoto.com/id/1426542331/photo/trash-plastics-dump-under-water.jpg?s=612x612&w=0&k=20&c=b7ymmVH_nSELPiUM0m7RJ1AK49Ak3P7LgEGAEn81CFk=",
+    "grade_level": 12
   },
   {
-    "title": "Sustainable Living Practices",
-    "description": "A website providing practical advice for adopting sustainable habits at home and in the community.",
-    "resource_type": "website",
-    "published_date": "2022-03-05",
-    "environment_topic": "sustainability",
-    "grade_level": 6
-  },
-  {
-    "title": "Endangered Species: A Global Issue",
-    "description": "An ebook exploring the reasons behind species endangerment and efforts to reverse it.",
-    "resource_type": "ebook",
-    "published_date": "2020-10-08",
-    "environment_topic": "wildlife conservation",
-    "grade_level": 6
-  },
-  {
+    "id": 8,
     "title": "Recycling in Everyday Life",
     "description": "A guidebook promoting recycling practices and explaining how it benefits the environment.",
-    "resource_type": "book",
+    "resource_type": "Book",
     "published_date": "2023-04-20",
-    "environment_topic": "recycling",
-    "grade_level": 8
-  },
-  {
-    "title": "The Impact of Urbanization on Natural Habitats",
-    "description": "An article analyzing how expanding cities affect natural habitats and possible solutions.",
-    "resource_type": "article",
-    "published_date": "2021-12-15",
-    "environment_topic": "urbanization",
+    "environment_topic": "Recycling",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcmqYR25YmwRUMpjtQ0ZyQWf2ao6Dp6p1JmQ&s",
     "grade_level": 9
   },
   {
+    "id": 9,
     "title": "The Benefits of Wind Energy",
     "description": "A website explaining how wind turbines generate electricity and their environmental advantages.",
-    "resource_type": "website",
+    "resource_type": "Website",
     "published_date": "2022-08-09",
-    "environment_topic": "renewable energy",
-    "grade_level": 9
-  },
-  {
-    "title": "Rainforest Preservation Projects",
-    "description": "An ebook detailing ongoing efforts to preserve rainforests and combat illegal logging.",
-    "resource_type": "ebook",
-    "published_date": "2021-01-30",
-    "environment_topic": "deforestation",
-    "grade_level": 8
-  },
-  {
-    "title": "Carbon Footprint Reduction Tips",
-    "description": "A practical article on reducing individual and collective carbon footprints.",
-    "resource_type": "article",
-    "published_date": "2023-07-19",
-    "environment_topic": "climate change",
+    "environment_topic": "Renewable Energy",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Wind_turbines_in_southern_California_2016.jpg/640px-Wind_turbines_in_southern_California_2016.jpg",
     "grade_level": 10
   },
   {
+    "id": 10,
     "title": "Protecting Marine Life from Pollution",
     "description": "A website highlighting the effects of pollution on marine ecosystems and mitigation measures.",
-    "resource_type": "website",
+    "resource_type": "Website",
     "published_date": "2023-05-12",
-    "environment_topic": "pollution",
-    "grade_level": 7
+    "environment_topic": "Pollution",
+    "image": "https://i.natgeofe.com/n/ef3f1df1-e010-4eba-81eb-658609d02d52/plastic-waste-single-use-worldwide-consumption-animals-2_16x9.jpg",
+    "grade_level": 11
   },
   {
+    "id": 11,
     "title": "Hydropower: Harnessing Water for Energy",
     "description": "A book on the principles and applications of hydropower as a renewable energy source.",
-    "resource_type": "book",
+    "resource_type": "Book",
     "published_date": "2020-06-18",
-    "environment_topic": "renewable energy",
-    "grade_level": 9
+    "environment_topic": "Renewable Energy",
+    "image": "https://conservativeenergynetwork.org/wp-content/uploads/2024/02/8.jpg",
+    "grade_level": 12
   },
   {
+    "id": 12,
     "title": "The Role of Trees in Climate Regulation",
     "description": "An article emphasizing the importance of trees in mitigating climate change and preserving biodiversity.",
-    "resource_type": "article",
+    "resource_type": "Article",
     "published_date": "2022-10-29",
-    "environment_topic": "ecosystems",
-    "grade_level": 7
+    "environment_topic": "Ecosystems",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScMPV4b-ye_vSLVTlIKlVhyCF_3UIswJSuTw&s",
+    "grade_level": 9
   }
 ]
