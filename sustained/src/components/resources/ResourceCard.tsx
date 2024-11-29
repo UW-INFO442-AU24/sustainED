@@ -24,7 +24,7 @@ function ResourceCard(props: ResourceData) {
     return (
         <div className="col-sm-1 col-md-6">
             <div className="card resource">
-                <img src={image} className="resource-img"></img>
+                <img src={image} className="resource-img" alt="library resource background"></img>
                 <h1 className="resource">{title}</h1>
                 <p>{description}</p>
                 <p><strong>Environment Topic:</strong> {environment_topic}</p>
