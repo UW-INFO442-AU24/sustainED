@@ -1,12 +1,11 @@
 import ResourceCard, { ResourceData } from './ResourceCard';
-import resourcesData from './resources.json'
+import { getDatabase, ref, get, child } from 'firebase/database';
 import { useState, useEffect, ReactNode } from 'react';
 import Filter from './Filter'
 import './resourceLib.css'
 
 function Library() {
-    const resources: ResourceData[] = resourcesData as ResourceData[]  
-
+    const [resources, setResources] = useState<ResourceData[]>([])
     const [filteredResources, setFilteredResources] = useState<ReactNode>([])
     const [selectedResourceType, setSelectedResourceType] = useState<string>("")
     const [selectedEnvironmentTopic, setSelectedEnvironmentTopic] = useState<string>("")
@@ -14,7 +13,6 @@ function Library() {
     const [userSearch, setUserSearch] = useState<string>("")
     const [resultMessage, setResultMessage] = useState<string>("")
     const [filterRequestBoolean, setFilterRequestBoolean] = useState<boolean>()
-
 
     // Gathers unique resource types, environment topic, and grade levels
     const resourceTypes: string[] = resources
@@ -36,6 +34,18 @@ function Library() {
         })
 
     useEffect(() => {
+        // grab from database
+        const dbRef = ref(getDatabase());
+        get(child(dbRef, '/library')).then((snapshot) => {
+        if (snapshot.exists()) {
+            setResources(snapshot.val());
+        } else {
+            console.log("No data available");
+        }
+        }).catch((error) => {
+            console.error(error);
+        });
+
         let filteredData : ResourceData[] = resources
 
         // Filters the library database by the user's selected: 
@@ -68,6 +78,7 @@ function Library() {
                 published_date={filteredResource.published_date}
                 environment_topic={filteredResource.environment_topic}
                 grade_level={filteredResource.grade_level}
+                image={filteredResource.image}
             />
         ));
 
@@ -81,7 +92,7 @@ function Library() {
         }
 
         setFilteredResources(resourceCards);
-    }, [selectedResourceType, selectedEnvironmentTopic, selectedGradeLevel, userSearch])
+    }, [resources, selectedResourceType, selectedEnvironmentTopic, selectedGradeLevel, userSearch])
 
     return (
         <div className="container">
