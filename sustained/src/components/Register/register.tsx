@@ -24,6 +24,11 @@ const Form = () => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
+  const validateGrade = (grade: string) => {
+    const gradeRegex = /^(1st|2nd|3rd|[4-9]th|1[0-2]th)$/
+    return gradeRegex.test(grade)
+  }
+
   // event handler to handle form submissions
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
@@ -32,10 +37,18 @@ const Form = () => {
     setSuccess(null);
 
     // object with current formData
-    const { email, password, password2, ...userData } = formData;
+    const { email, password, password2, grade, ...userData } = formData;
+
+    // validate passwords
     if (password !== password2) {
       setError("Passwords are not matching.")
       return;
+    }
+
+    // validate grade
+    if (!validateGrade(grade)) {
+      setError("Plase enter a valid grade (e.g. 1st, 2nd, 3rd).")
+      return
     }
 
     const db = getDatabase();
@@ -137,7 +150,7 @@ const Form = () => {
               className="form-control"
               id="grade"
               name="grade"
-              placeholder="Grade"
+              placeholder="Grade (e.g. 10th)"
               value={formData.grade}
               onChange={handleChange}
             />

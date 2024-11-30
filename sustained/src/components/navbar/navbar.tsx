@@ -21,6 +21,7 @@ const Navbar: React.FC = () => {
                     <li onClick={() => setIsOpen(false)}><Link to="/quiz-intro" className='link'>Quiz</Link></li>
                     <li onClick={() => setIsOpen(false)}><Link to="/library" className='link'>Resources</Link></li>
                     <li onClick={() => setIsOpen(false)}><Link to="/events" className='link'>Events</Link></li>
+                    <li onClick={() => setIsOpen(false)}><Link to="/profile" className='link'>Profile</Link></li>
                 </ul>
                 <button className='menuButton' onClick={toggleMenu}>
                     ☰

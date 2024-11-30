@@ -1,0 +1,146 @@
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-container p {
+text-align: center;
+position: relative;
+top: -25px;
+}
+
+.profile-container h1 {
+font-size: 2.5em;
+margin-bottom: 20px;
+}
+
+.profile-container h2 {
+font-size: 2em;
+margin-bottom: 15px;
+}
+
+.profile-container h3 {
+font-size: 1.5em;
+margin-bottom: 10px;
+}
+
+.profile-info {
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    padding: 20px 100px;
+    border-radius: 8px;
+    background-color: #FEF4D9;
+}
+
+.profile-info label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.logout-button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.logout-button:hover {
+    background-color: #e53935;
+}
+
+.save-button {
+    background-color: #416A45;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.save-button:hover {
+background-color: #45a049;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+.profile-container {
+    padding: 10px;
+}
+
+.profile-info {
+    padding: 20px 20px;
+}
+
+.profile-info label {
+    font-size: 1.2em;
+}
+
+.profile-container h1 {
+    font-size: 2em;
+}
+
+.profile-container h2 {
+    font-size: 1.8em;
+}
+
+.profile-container h3 {
+    font-size: 1.2em;
+}
+
+.profile-info {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.logout-button, .save-button {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 12px;
+}
+}
+
+/* Mobile adjustments for very small screens */
+@media (max-width: 480px) {
+.profile-container h1 {
+    font-size: 1.8em;
+}
+
+.profile-container h2 {
+    font-size: 1.6em;
+}
+
+.profile-container h3 {
+    font-size: 1.1em;
+}
+
+.profile-info {
+    padding: 15px;
+}
+
+input[type="text"], input[type="email"] {
+    padding: 12px;
+    font-size: 1em;
+}
+
+button, .logout-button, .save-button {
+    font-size: 1em;
+    padding: 14px;
+}
+}

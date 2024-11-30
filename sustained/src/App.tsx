@@ -8,6 +8,8 @@ import Library from './components/resources/Library';
 import Register from './components/Register/register'; 
 import Home from './components/home/homePage'
 import EventPage from './components/events/eventpage';
+import Profile from './components/profile/profile';
+import Login from './components/navbar/login';
 import './components/Register/registerStyle.css'; 
 import { NextUIProvider } from '@nextui-org/react';
 
@@ -29,6 +31,8 @@ function App() {
                 <Route path="/quiz-form" element={<QuizForm />} />
                 <Route path="/quiz-results" element={<QuizResults />} />
                 <Route path="/events" element={<EventPage />} />
+                <Route path='/profile' element={<Profile />} />
+                <Route path='/login' element={<Login />} />
                 <Route path='/' element={<Navigate to="/home" />} /> {/* when npm start is ran, the default page shown is the home component */}
               </Routes>
               </Router>
