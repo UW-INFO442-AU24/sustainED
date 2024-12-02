@@ -30,7 +30,7 @@ margin-bottom: 10px;
     border: 1px solid #ddd;
     padding: 20px 100px;
     border-radius: 8px;
-    background-color: #FEF4D9;
+    background-color: #f6f2e4;
     text-align: center;
 }
 
@@ -145,7 +145,7 @@ input[type="text"], input[type="email"] {
     font-size: 1em;
 }
 
-button, .logout-button, .save-button {
+.logout-button, .save-button {
     font-size: 1em;
     padding: 14px;
 }

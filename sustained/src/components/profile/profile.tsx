@@ -47,25 +47,13 @@ const Profile = () => {
       if (data) {
         setUserData(data)
         setEditedData(data)
-        // find user's favorited resources
-        //fetchFavoritedResources(uid)
       } else {
         console.log("no user data found in database")
       }
     })
   }
 
-  // fetch favorited resources for the user
-  // const fetchFavoritedResources = (uid: string) => {
-  //   const favoriteRef = ref(db, `users/${uid}/favorites`)
-  //   onValue(favoriteRef, (snapshot) => {
-  //     if (snapshot.exists()) {
-  //       setFavoritedResources(snapshot.val())
-  //     } else {
-  //       setFavoritedResources([]) // no favorites found
-  //     }
-  //   })
-  // }
+
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target
@@ -105,25 +93,11 @@ const Profile = () => {
     navigate("/login")
   }
 
-  // const handleLogin = async () => {
-  //   try {
-  //     signInWithEmailAndPassword(auth, email, password)
-  //       .then((userCredential) => {
-  //         // signed in
-  //         const user = userCredential.user
-  //       })
-  //       .catch((error) => {
-  //         const errorCode = error.code
-  //         const errorMessage = error.message
-  //       })
-  //   }
-  // }
-
   return (
     <div className="profile-container">
       {userData ? (
         <>
-          <h2>Welcome, {userData.firstName} {userData.lastName}!</h2>
+          <h2 className='pt-3'>Welcome, {userData.firstName} {userData.lastName}!</h2>
           <h2>You currently teach {userData.grade} grade!</h2>
           <div className='profile-info'>
             <h3>Your Information</h3>
@@ -186,7 +160,7 @@ const Profile = () => {
               ))}
           </div>
             ) : (
-              <p>No favorited resources yet.</p>
+              <p>No quiz results yet.</p>
             )}
           </div>
           <button onClick={handleLogout} className="logout-button">Log Out</button>

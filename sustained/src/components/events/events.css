@@ -139,6 +139,28 @@ h2 {
     background-color: #71614c;
 }
 
+.favorite-button-container {
+    position: absolute; 
+    bottom: 20px;
+    right: 125px;
+    z-index: 1;
+}
+
+button.favorite-button {
+    display: flex;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 12rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+button.favorite-button:hover {
+    background-color: darkgoldenrod;
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) { 
     .grid-container {
@@ -177,6 +199,14 @@ h2 {
 
     .learn-more-button {
         margin-top: 15px;
-        position: relative; 
+        position: relative;
+    }
+
+    .favorite-button-container {
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: -50px;
+        bottom: 75px;
+        left: -35px;
     }
 }

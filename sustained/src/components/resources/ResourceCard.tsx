@@ -1,4 +1,4 @@
-import { FavoriteButton } from "./FavoriteButton"
+import FavoriteButton from "./FavoriteButton";
 import MyDocument from "./ExportPDF"
 import { PDFDownloadLink } from '@react-pdf/renderer';
 
@@ -31,12 +31,12 @@ function ResourceCard(props: ResourceData) {
                 <p><strong>Source:</strong> {resource_type}</p>
                 <p><strong>Grade Level Comprehension:</strong> {grade_level}</p>
                 <p><strong>Date:</strong> {published_date}</p>
-                <div>
+                <div className="pdf-favorite-button">
+                    <FavoriteButton resource={props}/>
                     <PDFDownloadLink className="pdf-download" aria-label="Download a PDF"
                         document={MyDocument(props.title, props.description, props.published_date)}>
                             Download PDF
                     </PDFDownloadLink>
-                    {/* <FavoriteButton /> */}
                 </div>
             </div>
         </div>
