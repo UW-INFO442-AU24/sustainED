@@ -35,6 +35,7 @@ const QuizResults = () => {
         <div className='result-container'>
             <h2 className='qr-title'><b>Quiz Results</b></h2>
             <p className='subtitle'>Here are some recommended resources for you:</p>
+            <p className='subtitle'>This is also saved in your <b>Profile Page</b> for easy access!</p>
 
             {matchedResources.length > 0 ? (
                 <div className='cards-container'>

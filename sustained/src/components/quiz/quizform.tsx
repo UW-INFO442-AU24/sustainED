@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { RadioGroup, Radio, Button, cn, Progress } from "@nextui-org/react";
 import { useNavigate } from 'react-router-dom';
-import { getDatabase, ref, get} from 'firebase/database';
+import { getDatabase, ref, get, set } from 'firebase/database';
 import './quiz.css';
+import { getAuth } from 'firebase/auth';
 
 // defining the props of the resource array 
 export interface Resource {
@@ -118,6 +119,28 @@ const QuizForm = () => {
         const matched = matchingResources(resources, selectedOptions as Record<string, string>);
         console.log('Matched resources after submitting quiz:', matched);
         setMatchedResources(matched);
+    
+        // add matched resources to database for profile
+        const db = getDatabase();
+        const auth = getAuth();
+
+        if (matched.length > 0) {
+            const user = auth.currentUser
+            if (user) {
+                const userQuizRef = ref(db, `users/${user.uid}/quiz`)
+                 set(userQuizRef, matched)
+                    .then(() => {
+                        console.log("Matched resources saved successfully to Firebase.");
+                    })
+                    .catch((error) => {
+                        console.error("Error saving matched resources to Firebase:", error);
+                    });
+            } else {
+                console.log("not logged in");
+            }
+        }
+        
+        
         navigate('/quiz-results', { state: { selectedOptions, matchedResources: matched } });
     };
 
