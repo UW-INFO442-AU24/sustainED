@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom'; // MemoryRouter for testing
 import QuizResults from './QuizResults';
-import QuizForm, { Resource } from './QuizForm';
+import QuizForm, { Resource } from './quizform';
 import resourcesData from '../../data/resources.json';
 
 describe('QuizResults Tested', () => {
