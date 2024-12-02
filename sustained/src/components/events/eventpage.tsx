@@ -8,6 +8,7 @@ interface Event {
     id: number;
     image: string;
     title: string;
+    altText: string;
     date: string;
     time: string;
     location: string;
