@@ -65,7 +65,7 @@ const QuizResults = () => {
                 <p className='no-resources'>No matching resources found, try adjusting your answers to get better results!</p>
             )}
 
-            <Button className="restart-button" onClick={() => window.history.back()}>
+            <Button className="qz-restart-button" onClick={() => window.history.back()}>
                 Retake Quiz!
             </Button>
             <Button className="home-button" onClick={() => navigate('/home')}>

@@ -12,7 +12,7 @@ const QuizIntro = () => {
       <p className='s1'>Feel overwhelmed by the options? </p>
       <p className='s2'>Don't know where to start?</p>
       <p className='s3'>This short quiz will help you find the best suited resources for your classroom!</p>
-      <button onClick={() => navigate('/quiz-form')} className="start-button">
+      <button onClick={() => navigate('/quiz-form')} className="qz-start-button">
         Start Quiz!
       </button>
     </div>  
