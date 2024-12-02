@@ -37,7 +37,7 @@ In order to devlop SustainED we will be using the following frameworks and langu
 
 
 ### HMW statement: 
-#### How might we provide high school students in the Seattle area with the knowledge to improve their skills related to maintaining an environmentally sustainable lifestyle so that they can be better prepared to face climate change and reduce its effects and advancement?
+How might we support Seattle high school educators in teaching students the necessary skills for sustainable living to combat climate change?
 
 
 ### User Personas
