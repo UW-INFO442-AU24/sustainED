@@ -50,7 +50,7 @@ const QuizResults = () => {
                                     <div className="flex flex-col">
                                         <h4 className="text-white/90 font-medium text-xxl">{resource.title}</h4>
                                         <p className="text-small text-white/60">Type: {resource["media-type"]}</p>
-                                        <p className="text-small text-white/60">Grade Level: {resource["grade-level"]}</p>
+                                        <p className="text-small text-white/60">Grade Level: {resource["grade-level"].join(", ")} </p>
                                     </div>
                                 </div>
                                 <Button radius="full" size="sm" as="a" href={resource["external-link"]} target="_blank" rel="noopener noreferrer">

@@ -1,3 +1,6 @@
+// this is a script to import all the resources from the json file into the firebase database--to update the databae thorugh this script
+// add a new resource object with all the areas filled, then run uploadResource.js in terminal
+
 import { getDatabase, ref, set } from "firebase/database";
 import { initializeApp } from "firebase/app";
 
