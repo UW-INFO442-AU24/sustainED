@@ -14,6 +14,7 @@ SustainED is a website aimed at helping teachers in the Seattle Public School di
 - Event Page
     - Event Search
     - Event Filter
+- Profile
 
 ### Development
 
@@ -44,10 +45,15 @@ Our user personas can be viewed here: [Sustained User Personas](https://docs.goo
 
 
 ### Testing Protocol
-WIP
+Our testing protocal can be viewed here: [Testing Protocol](https://docs.google.com/document/d/1nQAEsdrBDB-K4Y7L7oHLDAoq31WcEIc2fwAIoUVoc7k/edit?usp=sharing)
 
 ### Bugs
-WIP
+We are aware that not every combination of quiz options will yield three recommended resources. This is due to time constraints that prevented us from finding a matching set of resources for every possible combination of options. Our temporary workaround is to select the following options: 
+- Any grade level
+- Media type: PDFs or Podcasts
+- Subject area: Science, English or Math
+- Time range: 15-30 minutes or Less than 15 minutes (only if the podcast option was chosen earlier)
+- Area: Impacts of Climate Change
 
 ### References:
 #### McLennan Report for SPS 2020. (2020). https://www.seattleschools.org/wp-content/uploads/2021/07/sustainability-vision-goals-ADA.pdf
