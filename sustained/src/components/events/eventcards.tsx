@@ -5,6 +5,7 @@ export type Event = {
     id: number;
     image: string;
     title: string;
+    altText: string;
     date: string;
     time: string;
     location: string;
@@ -15,7 +16,7 @@ export type Event = {
 export default function EventCards({ event }: { event: Event }) {
     return (
         <div className="event-card">
-            <img className="event-image" src={event.image} alt={event.title} />
+            <img className="event-image" src={event.image} alt={event.altText} />
             <div className="event-details">
                 <h2>{event.title}</h2>
                 <p><strong>Date:</strong> {event.date}</p>
