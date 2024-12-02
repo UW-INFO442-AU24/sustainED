@@ -89,6 +89,10 @@
     font-size: 1.6em;
   }
 
+  #footer {
+    background-color: #C4A484;
+  }
+
   @media (max-width: 768px) {
     #home-image-id {
       width: 100%;

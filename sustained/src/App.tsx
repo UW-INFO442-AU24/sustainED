@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Navbar from './components/navbar/navbar';
 import QuizIntro from './components/quiz/QuizIntro';
-import QuizForm from './components/quiz/QuizForm';
+import QuizForm from './components/quiz/quizform';
 import QuizResults from './components/quiz/QuizResults';
 import Library from './components/resources/Library';
 import Register from './components/Register/register'; 
@@ -10,6 +10,7 @@ import Home from './components/home/homePage'
 import EventPage from './components/events/eventpage';
 import Profile from './components/profile/profile';
 import Login from './components/navbar/login';
+import Footer from './components/footer/footer';
 import './components/Register/registerStyle.css'; 
 import { NextUIProvider } from '@nextui-org/react';
 
@@ -36,6 +37,7 @@ function App() {
                 <Route path='/' element={<Navigate to="/home" />} /> {/* when npm start is ran, the default page shown is the home component */}
               </Routes>
               </Router>
+              <Footer />
           </NextUIProvider>
         </main>
       </header>
