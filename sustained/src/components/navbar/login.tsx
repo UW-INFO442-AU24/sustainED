@@ -33,7 +33,7 @@ const Login = () => {
 
   return (
     <div className="container d-flex flex-column justify-content-center align-items-center">
-      <div className="card p-4" id="login-container">
+      <div className="card p-4">
         <div className="text-center mb-4">
           <h1>Login</h1>
           {error && <p className='text-danger'>{error}</p>}

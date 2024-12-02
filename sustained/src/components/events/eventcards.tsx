@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import EventFavoriteButton from "./EventFavoriteButton";
 
 export type Event = {
     id: number;
@@ -29,6 +30,9 @@ export default function EventCards({ event }: { event: Event }) {
                 >
                     Learn More
                 </a>
+            </div>
+            <div className="favorite-button-container">
+                <EventFavoriteButton event={event} />
             </div>
         </div>
     );

@@ -62,17 +62,15 @@ button.export-pdf, .pdf-download {
     text-align: center;
 }
 
-button.favorite-button {
-    display: flex;
+button.resource-favorite-button {
+    position: absolute;
+    padding: 5px;
     border-radius: 5px;
-    padding: 10px;
-    margin-top: 10px;
-    margin-left: 12rem;
-    background-color: yellow;
-    border-radius: 5px;
+    margin-left: 145px;
+    margin-top: 14px;
 }
 
-button.favorite-button:hover {
+button.resource-favorite-button:hover {
     background-color: darkgoldenrod;
 }
 
@@ -92,7 +90,7 @@ p.filter-result {
 div.card.resource {
     margin: 10px;
     background-color: #f6f2e4;
-    display: block;
+    display: relative;
     width: 95%;
 }
 
@@ -117,8 +115,12 @@ div.card.resource p {
         display: flex;
         flex-wrap: wrap;
     }
-    button.export-pdf, button.favorite-button, .pdf-download {
+    button.export-pdf, .pdf-download {
         margin-left: 28rem;
+    }
+    button.resource-favorite-button {
+        margin-top: 27px;
+        margin-left: 400px;
     }
     .resource-img {
         width: 20rem;
