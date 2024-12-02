@@ -25,7 +25,7 @@ export default function EventCards({ event }: { event: Event }) {
                 <p><strong>Type: </strong>{event.sustainabilityType}</p>
                 <a
                     href={event.link}
-                    className="learn-more-button"
+                    className="event-learn-more-button"
                     target="_blank"
                     rel="noopener noreferrer"
                 >

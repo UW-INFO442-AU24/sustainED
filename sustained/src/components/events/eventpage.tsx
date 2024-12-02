@@ -67,10 +67,10 @@ export default function EventPage() {
 
     return (
         <div className="event-page">
-            <div className="align-left-container">
+            <div className="event-align-left-container">
                 <h1 className="event-header">Upcoming Events</h1>
-                <h2>Find upcoming environmental sustainability events happening for Seattle educators!</h2>
-                <div className="search-container">
+                <p className="event-desc">Find upcoming environmental sustainability events for Seattle educators!</p>
+                <div className="event-search-container">
                     <EventFilter
                         setSearchTerm={setSearchTerm}
                         setSelectedEventType={setSelectedEventType}
@@ -79,7 +79,7 @@ export default function EventPage() {
                     />
                 </div>
             </div>
-            <div className="grid-container">
+            <div className="event-grid-container">
                 {filteredEvents.map((event) => (
                     <EventCards key={event.id} event={event} />
                 ))}

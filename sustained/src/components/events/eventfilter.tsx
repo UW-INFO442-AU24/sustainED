@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './events.css';
 
 type EventFilterProps = {
     setSearchTerm: (term: string) => void;
@@ -29,21 +30,21 @@ export default function EventFilter({
     };
 
     return (
-        <div className="filter-sort-container">
+        <div className="event-filter-sort-container">
             <input
-                className="search-bar"
+                className="event-search-bar"
                 type="text"
                 placeholder="Search events..."
                 onChange={handleSearchChange}
             />
-            <select className="dropdown-button" onChange={handleTypeChange}>
+            <select className="event-dropdown-button" onChange={handleTypeChange}>
                 <option value="">All Types</option>
                 <option value="Forestry">Forestry</option>
                 <option value="General">General</option>
                 <option value="Waste">Waste</option>
                 <option value="Conservation">Conservation</option>
             </select>
-            <select className="sort-button" onChange={handleSortChange}>
+            <select className="event-sort-button" onChange={handleSortChange}>
                 <option value="Newest First">Newest First</option>
                 <option value="Oldest First">Oldest First</option>
             </select>
