@@ -200,8 +200,14 @@ button.favorite-button:hover {
         text-align: center;
     }
 
+    .favorite-button-container {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+    }
+    
     .event-learn-more-button {
-        margin-top: 20px;
+        margin-top: 10px;
         margin-bottom: 10px;
         position: static; 
         align-self: center;
