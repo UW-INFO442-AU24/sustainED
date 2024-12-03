@@ -6,15 +6,11 @@ SustainED is a website aimed at helping teachers in the Seattle Public School di
 
 ### Features
 
-- Home Page
-- Quiz
-- Resource Page
-    - Resource Search
-    - Resource Filter
-- Event Page
-    - Event Search
-    - Event Filter
-- Profile
+- Home Page: briefly explains the reasoning behind SustainEd and allows users to register to create an account
+- Quiz: a short quiz users can take to recieve a set of recommended resources based on their classroom needs
+- Resource Page: a page full of resources users can filter, search, and sort through to best fit thier needs
+- Event Page: a set of cliamte change related events in the Seattle area users can attend. Users can also search and filter through these events to find ones in their interests
+- Profile: the user's account, where they can save events and morst recent set of recommended resources on their profile for future referencing
 
 ### Development
 
@@ -47,8 +43,8 @@ Our user personas can be viewed here: [Sustained User Personas](https://docs.goo
 ### Testing Protocol
 Our testing protocal can be viewed here: [Testing Protocol](https://docs.google.com/document/d/1nQAEsdrBDB-K4Y7L7oHLDAoq31WcEIc2fwAIoUVoc7k/edit?usp=sharing)
 
-### Bugs
-We are aware that not every combination of quiz options will yield three recommended resources. This is due to time constraints that prevented us from finding a matching set of resources for every possible combination of options. Our temporary workaround is to select the following options: 
+### Known Bugs & Temporary Workaround
+We are aware that not every combination of quiz options will yield three recommended resources. This is due to time constraints that prevented us from finding a matching set of resources for every possible combination of options. Our temporary workaround is to select the following options in the quiz: 
 - Any grade level
 - Media type: PDFs or Podcasts
 - Subject area: Science, English or Math
